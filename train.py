@@ -9,6 +9,7 @@ import time
 import random
 import re
 import sys
+import os
 
 import attr
 import argcomplete
@@ -83,10 +84,13 @@ def progress_bar(batch_num, report_interval, last_loss):
         "=" * fill, " " * (40 - fill), batch_num, last_loss), end='')
 
 
-def save_checkpoint(net, name, args, batch_num, losses, costs, seq_lengths):
+def save_checkpoint(net, name, args, batch_num, losses, costs, seq_lengths, total_epochs, batch_size):
     progress_clean()
-
-    basename = "{}/{}-{}-batch-{}".format(args.checkpoint_path, name, args.seed, batch_num)
+    # import os
+    dir_name = "{}/{}-Cuda-{}-{}-{}-{}".format(args.checkpoint_path, args.task, args.use_cuda, total_epochs, args.seed, batch_size)
+    if not os.path.exists(dir_name):
+        os.makedirs(dir_name)
+    basename = "{}/{}-{}-batch-{}".format(dir_name, name, args.seed, batch_num)
     model_fname = basename + ".model"
     LOGGER.info("Saving model checkpoint to: '%s'", model_fname)
     torch.save(net.state_dict(), model_fname)
@@ -223,7 +227,7 @@ def train_model(model, args):
         # Checkpoint
         if (args.checkpoint_interval != 0) and (batch_num % args.checkpoint_interval == 0):
             save_checkpoint(model.net, model.params.name, args,
-                            batch_num, losses, costs, seq_lengths)
+                            batch_num, losses, costs, seq_lengths, num_batches, model.params.batch_size)
 
     LOGGER.info("Done training.")
 
