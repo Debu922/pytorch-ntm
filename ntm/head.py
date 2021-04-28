@@ -4,6 +4,7 @@ from torch import nn
 import torch.nn.functional as F
 import numpy as np
 
+# torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
 def _split_cols(mat, lengths):
     """Split a 2D matrix to variable length columns."""

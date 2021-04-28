@@ -4,6 +4,7 @@ from torch import nn
 from torch.nn import Parameter
 import numpy as np
 
+# torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
 class LSTMController(nn.Module):
     """An NTM controller based on LSTM."""

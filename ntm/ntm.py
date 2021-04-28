@@ -1,8 +1,15 @@
 #!/usr/bin/env python
 import torch
+import numpy as np
 from torch import nn
 import torch.nn.functional as F
 
+# torch.set_default_tensor_type('torch.cuda.FloatTensor')
+
+# if torch.cuda.is_available():
+#     device = torch.device('cuda')
+# else:
+#     device = torch.device('cpu')
 
 class NTM(nn.Module):
     """A Neural Turing Machine."""
@@ -70,6 +77,7 @@ class NTM(nn.Module):
         prev_reads, prev_controller_state, prev_heads_states = prev_state
 
         # Use the controller to get an embeddings
+        # print((prev_reads[0].shape))
         inp = torch.cat([x] + prev_reads, dim=1)
         controller_outp, controller_state = self.controller(inp, prev_controller_state)
 

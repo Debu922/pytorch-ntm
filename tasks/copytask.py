@@ -8,6 +8,11 @@ from torch import optim
 import numpy as np
 
 from ntm.aio import EncapsulatedNTM
+if torch.cuda.is_available():
+    device = torch.device('cuda')
+else:
+    device = torch.device('cpu')
+
 
 
 # Generator of randomized test sequences
@@ -97,6 +102,8 @@ class CopyTaskModelTraining(object):
                               self.params.controller_size, self.params.controller_layers,
                               self.params.num_heads,
                               self.params.memory_n, self.params.memory_m)
+
+        # return net.to(device)
         return net
 
     @dataloader.default

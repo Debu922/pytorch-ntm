@@ -14,17 +14,37 @@ import attr
 import argcomplete
 import torch
 import numpy as np
+from contextlib import contextmanager
 
 
 LOGGER = logging.getLogger(__name__)
 
+if torch.cuda.is_available():
+    device = torch.device('cuda')
+else:
+    device = torch.device('cpu')
+
+@contextmanager
+def set_default_tensor_type(tensor_type):
+    if torch.tensor(0).is_cuda:
+        old_tensor_type = torch.cuda.FloatTensor
+    else:
+        old_tensor_type = torch.FloatTensor
+        
+    torch.set_default_tensor_type(tensor_type)
+    yield
+    torch.set_default_tensor_type(old_tensor_type)
+
+
 
 from tasks.copytask import CopyTaskModelTraining, CopyTaskParams
 from tasks.repeatcopytask import RepeatCopyTaskModelTraining, RepeatCopyTaskParams
+from tasks.recall import  RecallTaskModelTraining, AssociateRecallParams
 
 TASKS = {
     'copy': (CopyTaskModelTraining, CopyTaskParams),
-    'repeat-copy': (RepeatCopyTaskModelTraining, RepeatCopyTaskParams)
+    'repeat-copy': (RepeatCopyTaskModelTraining, RepeatCopyTaskParams),
+    'recall': (RecallTaskModelTraining, AssociateRecallParams)
 }
 
 
@@ -91,6 +111,7 @@ def clip_grads(net):
 
 def train_batch(net, criterion, optimizer, X, Y):
     """Trains a single batch."""
+    # print(X.device)
     optimizer.zero_grad()
     inp_seq_len = X.size(0)
     outp_seq_len, batch_size, _ = Y.size()
@@ -103,7 +124,7 @@ def train_batch(net, criterion, optimizer, X, Y):
         net(X[i])
 
     # Read the output (no input given)
-    y_out = torch.zeros(Y.size())
+    y_out = torch.zeros_like(Y)
     for i in range(outp_seq_len):
         y_out[i], _ = net()
 
@@ -113,7 +134,9 @@ def train_batch(net, criterion, optimizer, X, Y):
     optimizer.step()
 
     y_out_binarized = y_out.clone().data
-    y_out_binarized.apply_(lambda x: 0 if x < 0.5 else 1)
+    # y_out_binarized.apply_(lambda x: 0 if x < 0.5 else 1)
+
+    # y_out_binarized.shape
 
     # The cost is the number of error bits per sequence
     cost = torch.sum(torch.abs(y_out_binarized - Y.data))
@@ -148,9 +171,9 @@ def evaluate(net, criterion, X, Y):
 
     # The cost is the number of error bits per sequence
     cost = torch.sum(torch.abs(y_out_binarized - Y.data))
-
+    print(loss.data)
     result = {
-        'loss': loss.data[0],
+        'loss': loss.data,
         'cost': cost / batch_size,
         'y_out': y_out,
         'y_out_binarized': y_out_binarized,
@@ -173,7 +196,13 @@ def train_model(model, args):
     start_ms = get_ms()
 
     for batch_num, x, y in model.dataloader:
-        loss, cost = train_batch(model.net, model.criterion, model.optimizer, x, y)
+        # x, y = x.to(device), y.to(device)
+        if args.use_cuda:
+            net = model.net.to(device)
+        else:
+            net = model.net
+        # print(net.device)
+        loss, cost = train_batch(net, model.criterion, model.optimizer, x, y)
         losses += [loss]
         costs += [cost]
         seq_lengths += [y.size(0)]
@@ -198,6 +227,16 @@ def train_model(model, args):
 
     LOGGER.info("Done training.")
 
+def str2bool(v):
+    if isinstance(v, bool):
+       return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
 
 def init_arguments():
     parser = argparse.ArgumentParser(prog='train.py')
@@ -213,6 +252,7 @@ def init_arguments():
                         help="Path for saving checkpoint data (default: './')")
     parser.add_argument('--report-interval', type=int, default=REPORT_INTERVAL,
                         help="Reporting interval")
+    parser.add_argument('--use_cuda', type=str2bool, nargs='?', const=True, default=False, help="To search for CUDA compatibility of not")
 
     argcomplete.autocomplete(parser)
 
@@ -253,7 +293,9 @@ def init_model(args):
 
     LOGGER.info(params)
 
+    # model = model_cls(params=params)
     model = model_cls(params=params)
+
     return model
 
 
@@ -272,10 +314,21 @@ def main():
     init_seed(args.seed)
 
     # Initialize the model
-    model = init_model(args)
+    print(args.use_cuda)
+    if torch.cuda.is_available() and args.use_cuda:
+        with set_default_tensor_type(torch.cuda.FloatTensor):
+            model = init_model(args)
+            LOGGER.info('GPU Found: Using GPU')
+            LOGGER.info("Total number of parameters: %d", model.net.calculate_num_params())
+            train_model(model, args)
+    else:
+        with set_default_tensor_type(torch.FloatTensor):
+            device = torch.device('cpu')
+            model = init_model(args)
 
-    LOGGER.info("Total number of parameters: %d", model.net.calculate_num_params())
-    train_model(model, args)
+            LOGGER.info("Total number of parameters: %d", model.net.calculate_num_params())
+            train_model(model, args)
+
 
 
 if __name__ == '__main__':

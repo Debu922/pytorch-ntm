@@ -6,6 +6,10 @@ from .controller import LSTMController
 from .head import NTMReadHead, NTMWriteHead
 from .memory import NTMMemory
 
+# if torch.cuda.is_available():
+#     device = torch.device('cuda')
+# else:
+#     device = torch.device('cpu')
 
 class EncapsulatedNTM(nn.Module):
 

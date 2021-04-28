@@ -4,6 +4,7 @@ import torch.nn.functional as F
 from torch import nn
 import numpy as np
 
+# torch.set_default_tensor_type('torch.cuda.FloatTensor')
 
 def _convolve(w, s):
     """Circular convolution implementation."""
@@ -35,8 +36,9 @@ class NTMMemory(nn.Module):
 
         # Initialize memory bias
         stdev = 1 / (np.sqrt(N + M))
-        nn.init.uniform_(self.mem_bias, -stdev, stdev)
-
+        const_init = np.random.rand()
+        #nn.init.uniform_(self.mem_bias, -stdev, stdev)
+        nn.init.constant_(self.mem_bias, const_init)
     def reset(self, batch_size):
         """Initialize memory from bias, for start-of-sequence."""
         self.batch_size = batch_size
