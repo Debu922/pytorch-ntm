@@ -1,7 +1,7 @@
 # How to run examples
 
-1. python train.py --task 'copy' --checkpoint-interval 200 --checkpoint-path checkpoints/copy_gpu/ -pnum_batches=50000 --use_cuda True
-2. python train.py --task 'recall' --checkpoint-interval 1000 --checkpoint-path checkpoints/recall_cpu/ -pnum_batches=100000 --use_cuda False
+1. python train.py --task 'copy' --checkpoint-interval 200 --checkpoint-path checkpoints/ -pnum_batches=50000 --use_cuda True
+2. python train.py --task 'recall' --checkpoint-interval 1000 --checkpoint-path checkpoints/ -pnum_batches=100000 --use_cuda False
 
 # PyTorch Neural Turing Machine (NTM)
 
