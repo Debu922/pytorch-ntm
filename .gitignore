@@ -1,4 +1,4 @@
-.cache/
+.*cache*/
 notebooks/.ipynb_checkpoints
 env
-
+.vscode/

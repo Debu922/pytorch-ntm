@@ -41,11 +41,13 @@ def set_default_tensor_type(tensor_type):
 from tasks.copytask import CopyTaskModelTraining, CopyTaskParams
 from tasks.repeatcopytask import RepeatCopyTaskModelTraining, RepeatCopyTaskParams
 from tasks.recall import  RecallTaskModelTraining, AssociateRecallParams
+from tasks.sort import SortTaskModelTraining, SortTaskParams
 
 TASKS = {
     'copy': (CopyTaskModelTraining, CopyTaskParams),
     'repeat-copy': (RepeatCopyTaskModelTraining, RepeatCopyTaskParams),
-    'recall': (RecallTaskModelTraining, AssociateRecallParams)
+    'recall': (RecallTaskModelTraining, AssociateRecallParams),
+    'sort': (SortTaskModelTraining, SortTaskParams)
 }
 
 
