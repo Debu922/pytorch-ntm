@@ -3,359 +3,258 @@ python train.py --task repeat-copy --checkpoint-path checkpoints/ --checkpoint-i
 False
 [2021-04-28 22:32:32,390] [INFO] [__main__]  Training for the **repeat-copy** task
 [2021-04-28 22:32:32,390] [INFO] [__main__]  RepeatCopyTaskParams(name='repeat-copy-task', controller_size=100, controller_layers=1, num_heads=1, sequence_width=8, sequence_min_len=1, sequence_max_len=10, repeat_min=1, repeat_max=10, memory_n=128, memory_m=20, num_batches=50000, batch_size=1, rmsprop_lr=0.0001, rmsprop_momentum=0.9, rmsprop_alpha=0.95)
-[2021-04-28 22:32:32,393] [INFO] [__main__]  Total number of parameters: 63381
-[2021-04-28 22:32:32,393] [INFO] [__main__]  Training model for 50000 batches (batch_size=1)...
-/home/mohit/anaconda3/envs/ntm-pytorch/lib/python3.8/site-packages/torch/nn/functional.py:1625: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
-  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
-[2021-04-28 22:33:22,802] [INFO] [__main__]  Batch 200 Loss: 0.647954 Cost: 124.55 Time: 252 ms/sequence
-[2021-04-28 22:34:09,016] [INFO] [__main__]  Batch 400 Loss: 0.624296 Cost: 121.39 Time: 231 ms/sequence
-[2021-04-28 22:35:05,657] [INFO] [__main__]  Batch 600 Loss: 0.616993 Cost: 120.21 Time: 283 ms/sequence
-[2021-04-28 22:36:04,438] [INFO] [__main__]  Batch 800 Loss: 0.603339 Cost: 123.38 Time: 293 ms/sequence
-[2021-04-28 22:36:57,913] [INFO] [__main__]  Batch 1000 Loss: 0.603156 Cost: 116.61 Time: 267 ms/sequence
-[2021-04-28 22:36:57,913] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-1000.model'
-[2021-04-28 22:36:57,915] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-1000.json'
-[2021-04-28 22:37:45,741] [INFO] [__main__]  Batch 1200 Loss: 0.590591 Cost: 106.13 Time: 239 ms/sequence
-[2021-04-28 22:38:36,259] [INFO] [__main__]  Batch 1400 Loss: 0.584474 Cost: 112.57 Time: 252 ms/sequence
-[2021-04-28 22:39:22,063] [INFO] [__main__]  Batch 1600 Loss: 0.584183 Cost: 115.22 Time: 229 ms/sequence
-[2021-04-28 22:40:13,433] [INFO] [__main__]  Batch 1800 Loss: 0.571871 Cost: 117.71 Time: 256 ms/sequence
-[2021-04-28 22:41:10,871] [INFO] [__main__]  Batch 2000 Loss: 0.568977 Cost: 121.51 Time: 287 ms/sequence
-[2021-04-28 22:41:10,871] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-2000.model'
-[2021-04-28 22:41:10,872] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-2000.json'
-[2021-04-28 22:42:04,792] [INFO] [__main__]  Batch 2200 Loss: 0.559665 Cost: 114.50 Time: 269 ms/sequence
-[2021-04-28 22:42:56,029] [INFO] [__main__]  Batch 2400 Loss: 0.560943 Cost: 116.97 Time: 256 ms/sequence
-[2021-04-28 22:43:42,285] [INFO] [__main__]  Batch 2600 Loss: 0.560445 Cost: 118.84 Time: 231 ms/sequence
-[2021-04-28 22:44:27,722] [INFO] [__main__]  Batch 2800 Loss: 0.545681 Cost: 114.39 Time: 227 ms/sequence
-[2021-04-28 22:45:21,962] [INFO] [__main__]  Batch 3000 Loss: 0.538894 Cost: 122.54 Time: 271 ms/sequence
-[2021-04-28 22:45:21,962] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-3000.model'
-[2021-04-28 22:45:21,964] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-3000.json'
-[2021-04-28 22:46:15,545] [INFO] [__main__]  Batch 3200 Loss: 0.543701 Cost: 116.29 Time: 267 ms/sequence
-[2021-04-28 22:47:09,299] [INFO] [__main__]  Batch 3400 Loss: 0.540831 Cost: 114.33 Time: 268 ms/sequence
-[2021-04-28 22:48:03,489] [INFO] [__main__]  Batch 3600 Loss: 0.527768 Cost: 111.45 Time: 270 ms/sequence
-[2021-04-28 22:48:58,434] [INFO] [__main__]  Batch 3800 Loss: 0.525279 Cost: 114.64 Time: 274 ms/sequence
-[2021-04-28 22:49:51,793] [INFO] [__main__]  Batch 4000 Loss: 0.525754 Cost: 107.55 Time: 266 ms/sequence
-[2021-04-28 22:49:51,793] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-4000.model'
-[2021-04-28 22:49:51,797] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-4000.json'
-[2021-04-28 22:50:50,114] [INFO] [__main__]  Batch 4200 Loss: 0.523504 Cost: 114.72 Time: 291 ms/sequence
-[2021-04-28 22:51:41,462] [INFO] [__main__]  Batch 4400 Loss: 0.513974 Cost: 110.95 Time: 256 ms/sequence
-[2021-04-28 22:52:24,365] [INFO] [__main__]  Batch 4600 Loss: 0.500540 Cost: 101.38 Time: 214 ms/sequence
-[2021-04-28 22:53:11,712] [INFO] [__main__]  Batch 4800 Loss: 0.509206 Cost: 101.01 Time: 236 ms/sequence
-[2021-04-28 22:54:00,852] [INFO] [__main__]  Batch 5000 Loss: 0.505125 Cost: 111.73 Time: 245 ms/sequence
-[2021-04-28 22:54:00,852] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-5000.model'
-[2021-04-28 22:54:00,853] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-5000.json'
-[2021-04-28 22:54:46,435] [INFO] [__main__]  Batch 5200 Loss: 0.507845 Cost: 106.29 Time: 227 ms/sequence
-[2021-04-28 22:55:32,752] [INFO] [__main__]  Batch 5400 Loss: 0.515629 Cost: 105.24 Time: 231 ms/sequence
-[2021-04-28 22:56:18,022] [INFO] [__main__]  Batch 5600 Loss: 0.491548 Cost: 99.44 Time: 226 ms/sequence
-[2021-04-28 22:57:07,193] [INFO] [__main__]  Batch 5800 Loss: 0.505930 Cost: 108.40 Time: 245 ms/sequence
-[2021-04-28 22:57:52,179] [INFO] [__main__]  Batch 6000 Loss: 0.499246 Cost: 110.64 Time: 224 ms/sequence
-[2021-04-28 22:57:52,179] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-6000.model'
-[2021-04-28 22:57:52,181] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-6000.json'
-[2021-04-28 22:58:39,220] [INFO] [__main__]  Batch 6200 Loss: 0.507043 Cost: 106.21 Time: 235 ms/sequence
-[2021-04-28 22:59:21,158] [INFO] [__main__]  Batch 6400 Loss: 0.498642 Cost: 99.24 Time: 209 ms/sequence
-[2021-04-28 23:00:12,005] [INFO] [__main__]  Batch 6600 Loss: 0.506565 Cost: 110.45 Time: 254 ms/sequence
-[2021-04-28 23:01:06,001] [INFO] [__main__]  Batch 6800 Loss: 0.489860 Cost: 108.21 Time: 269 ms/sequence
-[2021-04-28 23:01:57,088] [INFO] [__main__]  Batch 7000 Loss: 0.489037 Cost: 104.59 Time: 255 ms/sequence
-[2021-04-28 23:01:57,088] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-7000.model'
-[2021-04-28 23:01:57,090] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-7000.json'
-[2021-04-28 23:02:45,531] [INFO] [__main__]  Batch 7200 Loss: 0.510393 Cost: 107.55 Time: 242 ms/sequence
-[2021-04-28 23:03:41,893] [INFO] [__main__]  Batch 7400 Loss: 0.502957 Cost: 111.41 Time: 281 ms/sequence
-[2021-04-28 23:04:34,524] [INFO] [__main__]  Batch 7600 Loss: 0.504690 Cost: 113.46 Time: 263 ms/sequence
-[2021-04-28 23:05:20,606] [INFO] [__main__]  Batch 7800 Loss: 0.490369 Cost: 115.00 Time: 230 ms/sequence
-[2021-04-28 23:06:01,762] [INFO] [__main__]  Batch 8000 Loss: 0.486905 Cost: 98.51 Time: 205 ms/sequence
-[2021-04-28 23:06:01,762] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-8000.model'
-[2021-04-28 23:06:01,763] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-8000.json'
-[2021-04-28 23:06:42,059] [INFO] [__main__]  Batch 8200 Loss: 0.467227 Cost: 97.33 Time: 201 ms/sequence
-[2021-04-28 23:07:22,903] [INFO] [__main__]  Batch 8400 Loss: 0.481074 Cost: 99.53 Time: 204 ms/sequence
-[2021-04-28 23:08:08,895] [INFO] [__main__]  Batch 8600 Loss: 0.503842 Cost: 104.47 Time: 229 ms/sequence
-[2021-04-28 23:08:59,632] [INFO] [__main__]  Batch 8800 Loss: 0.500479 Cost: 108.66 Time: 253 ms/sequence
-[2021-04-28 23:09:51,407] [INFO] [__main__]  Batch 9000 Loss: 0.489529 Cost: 104.47 Time: 258 ms/sequence
-[2021-04-28 23:09:51,407] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-9000.model'
-[2021-04-28 23:09:51,409] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-9000.json'
-[2021-04-28 23:10:42,182] [INFO] [__main__]  Batch 9200 Loss: 0.486879 Cost: 98.31 Time: 253 ms/sequence
-[2021-04-28 23:11:43,607] [INFO] [__main__]  Batch 9400 Loss: 0.488588 Cost: 124.96 Time: 307 ms/sequence
-[2021-04-28 23:12:36,819] [INFO] [__main__]  Batch 9600 Loss: 0.496045 Cost: 105.65 Time: 266 ms/sequence
-[2021-04-28 23:13:27,332] [INFO] [__main__]  Batch 9800 Loss: 0.481793 Cost: 101.73 Time: 252 ms/sequence
-[2021-04-28 23:14:17,142] [INFO] [__main__]  Batch 10000 Loss: 0.494606 Cost: 112.98 Time: 249 ms/sequence
-[2021-04-28 23:14:17,142] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-10000.model'
-[2021-04-28 23:14:17,144] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-10000.json'
-[2021-04-28 23:15:10,992] [INFO] [__main__]  Batch 10200 Loss: 0.483689 Cost: 115.18 Time: 269 ms/sequence
-[2021-04-28 23:16:03,052] [INFO] [__main__]  Batch 10400 Loss: 0.481759 Cost: 111.07 Time: 260 ms/sequence
-[2021-04-28 23:16:52,170] [INFO] [__main__]  Batch 10600 Loss: 0.471979 Cost: 100.15 Time: 245 ms/sequence
-[2021-04-28 23:17:36,473] [INFO] [__main__]  Batch 10800 Loss: 0.473819 Cost: 95.74 Time: 221 ms/sequence
-[2021-04-28 23:18:22,430] [INFO] [__main__]  Batch 11000 Loss: 0.486521 Cost: 105.13 Time: 229 ms/sequence
-[2021-04-28 23:18:22,430] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-11000.model'
-[2021-04-28 23:18:22,431] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-11000.json'
-[2021-04-28 23:19:05,410] [INFO] [__main__]  Batch 11200 Loss: 0.481270 Cost: 97.61 Time: 214 ms/sequence
-[2021-04-28 23:19:50,311] [INFO] [__main__]  Batch 11400 Loss: 0.486859 Cost: 105.49 Time: 224 ms/sequence
-[2021-04-28 23:20:36,503] [INFO] [__main__]  Batch 11600 Loss: 0.474123 Cost: 98.22 Time: 230 ms/sequence
-[2021-04-28 23:21:28,264] [INFO] [__main__]  Batch 11800 Loss: 0.458420 Cost: 98.87 Time: 258 ms/sequence
-[2021-04-28 23:22:10,541] [INFO] [__main__]  Batch 12000 Loss: 0.470342 Cost: 95.06 Time: 211 ms/sequence
-[2021-04-28 23:22:10,541] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-12000.model'
-[2021-04-28 23:22:10,542] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-12000.json'
-[2021-04-28 23:22:57,402] [INFO] [__main__]  Batch 12200 Loss: 0.460320 Cost: 106.01 Time: 234 ms/sequence
-[2021-04-28 23:23:46,879] [INFO] [__main__]  Batch 12400 Loss: 0.486592 Cost: 102.50 Time: 247 ms/sequence
-[2021-04-28 23:24:32,055] [INFO] [__main__]  Batch 12600 Loss: 0.464528 Cost: 98.75 Time: 225 ms/sequence
-[2021-04-28 23:25:25,104] [INFO] [__main__]  Batch 12800 Loss: 0.491069 Cost: 110.54 Time: 265 ms/sequence
-[2021-04-28 23:26:17,529] [INFO] [__main__]  Batch 13000 Loss: 0.477204 Cost: 105.55 Time: 262 ms/sequence
-[2021-04-28 23:26:17,529] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-13000.model'
-[2021-04-28 23:26:17,531] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-13000.json'
-[2021-04-28 23:27:07,319] [INFO] [__main__]  Batch 13200 Loss: 0.466846 Cost: 103.70 Time: 248 ms/sequence
-[2021-04-28 23:27:58,250] [INFO] [__main__]  Batch 13400 Loss: 0.470682 Cost: 99.59 Time: 254 ms/sequence
-[2021-04-28 23:28:46,651] [INFO] [__main__]  Batch 13600 Loss: 0.485012 Cost: 112.97 Time: 242 ms/sequence
-[2021-04-28 23:29:35,919] [INFO] [__main__]  Batch 13800 Loss: 0.482558 Cost: 117.46 Time: 246 ms/sequence
-[2021-04-28 23:30:19,394] [INFO] [__main__]  Batch 14000 Loss: 0.471301 Cost: 101.16 Time: 217 ms/sequence
-[2021-04-28 23:30:19,394] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-14000.model'
-[2021-04-28 23:30:19,396] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-14000.json'
-[2021-04-28 23:31:09,851] [INFO] [__main__]  Batch 14200 Loss: 0.487107 Cost: 116.58 Time: 252 ms/sequence
-[2021-04-28 23:31:58,715] [INFO] [__main__]  Batch 14400 Loss: 0.453104 Cost: 105.52 Time: 244 ms/sequence
-[2021-04-28 23:32:46,897] [INFO] [__main__]  Batch 14600 Loss: 0.462100 Cost: 99.92 Time: 240 ms/sequence
-[2021-04-28 23:33:38,452] [INFO] [__main__]  Batch 14800 Loss: 0.467950 Cost: 108.96 Time: 257 ms/sequence
-[2021-04-28 23:34:26,016] [INFO] [__main__]  Batch 15000 Loss: 0.485167 Cost: 105.97 Time: 237 ms/sequence
-[2021-04-28 23:34:26,016] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-15000.model'
-[2021-04-28 23:34:26,017] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-15000.json'
-[2021-04-28 23:35:13,908] [INFO] [__main__]  Batch 15200 Loss: 0.459985 Cost: 91.76 Time: 239 ms/sequence
-[2021-04-28 23:36:02,346] [INFO] [__main__]  Batch 15400 Loss: 0.476879 Cost: 111.16 Time: 242 ms/sequence
-[2021-04-28 23:36:45,045] [INFO] [__main__]  Batch 15600 Loss: 0.449984 Cost: 103.39 Time: 213 ms/sequence
-[2021-04-28 23:37:28,106] [INFO] [__main__]  Batch 15800 Loss: 0.468793 Cost: 105.31 Time: 215 ms/sequence
-[2021-04-28 23:38:08,567] [INFO] [__main__]  Batch 16000 Loss: 0.465961 Cost: 95.27 Time: 202 ms/sequence
-[2021-04-28 23:38:08,567] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-16000.model'
-[2021-04-28 23:38:08,568] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-16000.json'
-[2021-04-28 23:38:50,752] [INFO] [__main__]  Batch 16200 Loss: 0.475787 Cost: 100.32 Time: 210 ms/sequence
-[2021-04-28 23:39:32,847] [INFO] [__main__]  Batch 16400 Loss: 0.470463 Cost: 103.28 Time: 210 ms/sequence
-[2021-04-28 23:40:18,976] [INFO] [__main__]  Batch 16600 Loss: 0.467017 Cost: 113.83 Time: 230 ms/sequence
-[2021-04-28 23:40:59,080] [INFO] [__main__]  Batch 16800 Loss: 0.453843 Cost: 88.50 Time: 200 ms/sequence
-[2021-04-28 23:41:42,837] [INFO] [__main__]  Batch 17000 Loss: 0.456809 Cost: 103.32 Time: 218 ms/sequence
-[2021-04-28 23:41:42,837] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-17000.model'
-[2021-04-28 23:41:42,839] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-17000.json'
-[2021-04-28 23:42:27,131] [INFO] [__main__]  Batch 17200 Loss: 0.472988 Cost: 98.72 Time: 221 ms/sequence
-[2021-04-28 23:43:11,959] [INFO] [__main__]  Batch 17400 Loss: 0.463156 Cost: 106.08 Time: 224 ms/sequence
-[2021-04-28 23:43:58,934] [INFO] [__main__]  Batch 17600 Loss: 0.462627 Cost: 101.64 Time: 234 ms/sequence
-[2021-04-28 23:44:43,483] [INFO] [__main__]  Batch 17800 Loss: 0.464462 Cost: 92.19 Time: 222 ms/sequence
-[2021-04-28 23:45:33,451] [INFO] [__main__]  Batch 18000 Loss: 0.474120 Cost: 110.98 Time: 249 ms/sequence
-[2021-04-28 23:45:33,451] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-18000.model'
-[2021-04-28 23:45:33,452] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-18000.json'
-[2021-04-28 23:46:19,903] [INFO] [__main__]  Batch 18200 Loss: 0.470605 Cost: 104.07 Time: 232 ms/sequence
-[2021-04-28 23:47:04,147] [INFO] [__main__]  Batch 18400 Loss: 0.462688 Cost: 105.53 Time: 221 ms/sequence
-[2021-04-28 23:47:45,087] [INFO] [__main__]  Batch 18600 Loss: 0.453464 Cost: 96.16 Time: 204 ms/sequence
-[2021-04-28 23:48:32,487] [INFO] [__main__]  Batch 18800 Loss: 0.455774 Cost: 100.51 Time: 237 ms/sequence
-[2021-04-28 23:49:22,651] [INFO] [__main__]  Batch 19000 Loss: 0.473705 Cost: 114.53 Time: 250 ms/sequence
-[2021-04-28 23:49:22,651] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-19000.model'
-[2021-04-28 23:49:22,653] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-19000.json'
-[2021-04-28 23:50:04,804] [INFO] [__main__]  Batch 19200 Loss: 0.443702 Cost: 96.91 Time: 210 ms/sequence
-[2021-04-28 23:50:48,669] [INFO] [__main__]  Batch 19400 Loss: 0.449913 Cost: 99.72 Time: 219 ms/sequence
-[2021-04-28 23:51:37,430] [INFO] [__main__]  Batch 19600 Loss: 0.452709 Cost: 100.99 Time: 243 ms/sequence
-[2021-04-28 23:52:26,611] [INFO] [__main__]  Batch 19800 Loss: 0.465620 Cost: 106.06 Time: 245 ms/sequence
-[2021-04-28 23:53:15,234] [INFO] [__main__]  Batch 20000 Loss: 0.471598 Cost: 109.33 Time: 243 ms/sequence
-[2021-04-28 23:53:15,235] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-20000.model'
-[2021-04-28 23:53:15,236] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-20000.json'
-[2021-04-28 23:54:03,024] [INFO] [__main__]  Batch 20200 Loss: 0.458687 Cost: 105.72 Time: 238 ms/sequence
-[2021-04-28 23:54:51,168] [INFO] [__main__]  Batch 20400 Loss: 0.446530 Cost: 105.93 Time: 240 ms/sequence
-[2021-04-28 23:55:38,614] [INFO] [__main__]  Batch 20600 Loss: 0.453995 Cost: 111.99 Time: 237 ms/sequence
-[2021-04-28 23:56:28,205] [INFO] [__main__]  Batch 20800 Loss: 0.459055 Cost: 109.57 Time: 247 ms/sequence
-[2021-04-28 23:57:13,613] [INFO] [__main__]  Batch 21000 Loss: 0.459568 Cost: 98.68 Time: 227 ms/sequence
-[2021-04-28 23:57:13,613] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-21000.model'
-[2021-04-28 23:57:13,614] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-21000.json'
-[2021-04-28 23:58:05,812] [INFO] [__main__]  Batch 21200 Loss: 0.454188 Cost: 113.02 Time: 260 ms/sequence
-[2021-04-28 23:58:52,247] [INFO] [__main__]  Batch 21400 Loss: 0.446710 Cost: 100.44 Time: 232 ms/sequence
-[2021-04-28 23:59:40,256] [INFO] [__main__]  Batch 21600 Loss: 0.436427 Cost: 103.70 Time: 240 ms/sequence
-[2021-04-29 00:00:25,127] [INFO] [__main__]  Batch 21800 Loss: 0.419170 Cost: 92.98 Time: 224 ms/sequence
-[2021-04-29 00:01:13,317] [INFO] [__main__]  Batch 22000 Loss: 0.451592 Cost: 104.60 Time: 240 ms/sequence
-[2021-04-29 00:01:13,317] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-22000.model'
-[2021-04-29 00:01:13,318] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-22000.json'
-[2021-04-29 00:01:56,864] [INFO] [__main__]  Batch 22200 Loss: 0.427995 Cost: 90.96 Time: 217 ms/sequence
-[2021-04-29 00:02:45,575] [INFO] [__main__]  Batch 22400 Loss: 0.453651 Cost: 101.89 Time: 243 ms/sequence
-[2021-04-29 00:03:31,602] [INFO] [__main__]  Batch 22600 Loss: 0.489697 Cost: 103.09 Time: 230 ms/sequence
-[2021-04-29 00:04:15,910] [INFO] [__main__]  Batch 22800 Loss: 0.440428 Cost: 98.99 Time: 221 ms/sequence
-[2021-04-29 00:05:05,221] [INFO] [__main__]  Batch 23000 Loss: 0.462338 Cost: 106.25 Time: 246 ms/sequence
-[2021-04-29 00:05:05,221] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-23000.model'
-[2021-04-29 00:05:05,223] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-23000.json'
-[2021-04-29 00:05:50,631] [INFO] [__main__]  Batch 23200 Loss: 0.429408 Cost: 99.40 Time: 227 ms/sequence
-[2021-04-29 00:06:39,378] [INFO] [__main__]  Batch 23400 Loss: 0.452571 Cost: 103.71 Time: 243 ms/sequence
-[2021-04-29 00:07:28,771] [INFO] [__main__]  Batch 23600 Loss: 0.463634 Cost: 108.35 Time: 246 ms/sequence
-[2021-04-29 00:08:20,286] [INFO] [__main__]  Batch 23800 Loss: 0.463549 Cost: 114.31 Time: 257 ms/sequence
-[2021-04-29 00:09:08,126] [INFO] [__main__]  Batch 24000 Loss: 0.455621 Cost: 100.68 Time: 239 ms/sequence
-[2021-04-29 00:09:08,126] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-24000.model'
-[2021-04-29 00:09:08,128] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-24000.json'
-[2021-04-29 00:09:56,009] [INFO] [__main__]  Batch 24200 Loss: 0.444249 Cost: 98.48 Time: 239 ms/sequence
-[2021-04-29 00:10:39,032] [INFO] [__main__]  Batch 24400 Loss: 0.436048 Cost: 88.86 Time: 215 ms/sequence
-[2021-04-29 00:11:23,394] [INFO] [__main__]  Batch 24600 Loss: 0.432885 Cost: 94.18 Time: 221 ms/sequence
-[2021-04-29 00:12:12,155] [INFO] [__main__]  Batch 24800 Loss: 0.442519 Cost: 108.84 Time: 243 ms/sequence
-[2021-04-29 00:12:57,535] [INFO] [__main__]  Batch 25000 Loss: 0.456947 Cost: 99.43 Time: 226 ms/sequence
-[2021-04-29 00:12:57,536] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-25000.model'
-[2021-04-29 00:12:57,537] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-25000.json'
-[2021-04-29 00:13:44,897] [INFO] [__main__]  Batch 25200 Loss: 0.455181 Cost: 103.79 Time: 236 ms/sequence
-[2021-04-29 00:14:30,348] [INFO] [__main__]  Batch 25400 Loss: 0.453144 Cost: 103.67 Time: 227 ms/sequence
-[2021-04-29 00:15:17,406] [INFO] [__main__]  Batch 25600 Loss: 0.465801 Cost: 112.36 Time: 235 ms/sequence
-[2021-04-29 00:16:03,622] [INFO] [__main__]  Batch 25800 Loss: 0.457340 Cost: 102.29 Time: 231 ms/sequence
-[2021-04-29 00:16:46,473] [INFO] [__main__]  Batch 26000 Loss: 0.439857 Cost: 88.61 Time: 214 ms/sequence
-[2021-04-29 00:16:46,473] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-26000.model'
-[2021-04-29 00:16:46,475] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-26000.json'
-[2021-04-29 00:17:34,123] [INFO] [__main__]  Batch 26200 Loss: 0.459707 Cost: 108.40 Time: 238 ms/sequence
-[2021-04-29 00:18:21,963] [INFO] [__main__]  Batch 26400 Loss: 0.434895 Cost: 104.47 Time: 239 ms/sequence
-[2021-04-29 00:19:05,216] [INFO] [__main__]  Batch 26600 Loss: 0.432029 Cost: 98.56 Time: 216 ms/sequence
-[2021-04-29 00:19:55,032] [INFO] [__main__]  Batch 26800 Loss: 0.463475 Cost: 106.60 Time: 249 ms/sequence
-[2021-04-29 00:20:40,991] [INFO] [__main__]  Batch 27000 Loss: 0.444085 Cost: 99.49 Time: 229 ms/sequence
-[2021-04-29 00:20:40,991] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-27000.model'
-[2021-04-29 00:20:40,993] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-27000.json'
-[2021-04-29 00:21:25,923] [INFO] [__main__]  Batch 27200 Loss: 0.442961 Cost: 102.90 Time: 224 ms/sequence
-[2021-04-29 00:22:13,986] [INFO] [__main__]  Batch 27400 Loss: 0.451461 Cost: 103.28 Time: 240 ms/sequence
-[2021-04-29 00:23:03,702] [INFO] [__main__]  Batch 27600 Loss: 0.458939 Cost: 107.82 Time: 248 ms/sequence
-[2021-04-29 00:23:48,132] [INFO] [__main__]  Batch 27800 Loss: 0.432653 Cost: 100.18 Time: 222 ms/sequence
-[2021-04-29 00:24:32,833] [INFO] [__main__]  Batch 28000 Loss: 0.452728 Cost: 97.96 Time: 223 ms/sequence
-[2021-04-29 00:24:32,833] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-28000.model'
-[2021-04-29 00:24:32,835] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-28000.json'
-[2021-04-29 00:25:23,916] [INFO] [__main__]  Batch 28200 Loss: 0.449408 Cost: 111.64 Time: 255 ms/sequence
-[2021-04-29 00:26:11,002] [INFO] [__main__]  Batch 28400 Loss: 0.436137 Cost: 104.62 Time: 235 ms/sequence
-[2021-04-29 00:26:58,141] [INFO] [__main__]  Batch 28600 Loss: 0.435436 Cost: 99.32 Time: 235 ms/sequence
-[2021-04-29 00:27:45,680] [INFO] [__main__]  Batch 28800 Loss: 0.441635 Cost: 99.95 Time: 237 ms/sequence
-[2021-04-29 00:28:30,415] [INFO] [__main__]  Batch 29000 Loss: 0.422969 Cost: 94.98 Time: 223 ms/sequence
-[2021-04-29 00:28:30,415] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-29000.model'
-[2021-04-29 00:28:30,417] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-29000.json'
-[2021-04-29 00:29:17,022] [INFO] [__main__]  Batch 29200 Loss: 0.424669 Cost: 104.98 Time: 233 ms/sequence
-[2021-04-29 00:30:03,488] [INFO] [__main__]  Batch 29400 Loss: 0.405303 Cost: 95.83 Time: 232 ms/sequence
-[2021-04-29 00:30:47,416] [INFO] [__main__]  Batch 29600 Loss: 0.403251 Cost: 95.75 Time: 219 ms/sequence
-[2021-04-29 00:31:36,259] [INFO] [__main__]  Batch 29800 Loss: 0.402892 Cost: 95.63 Time: 244 ms/sequence
-[2021-04-29 00:32:23,740] [INFO] [__main__]  Batch 30000 Loss: 0.392338 Cost: 95.99 Time: 237 ms/sequence
-[2021-04-29 00:32:23,740] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-30000.model'
-[2021-04-29 00:32:23,741] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-30000.json'
-[2021-04-29 00:33:09,874] [INFO] [__main__]  Batch 30200 Loss: 0.367936 Cost: 93.85 Time: 230 ms/sequence
-[2021-04-29 00:33:57,056] [INFO] [__main__]  Batch 30400 Loss: 0.368394 Cost: 92.24 Time: 235 ms/sequence
-[2021-04-29 00:34:44,165] [INFO] [__main__]  Batch 30600 Loss: 0.361590 Cost: 94.67 Time: 235 ms/sequence
-[2021-04-29 00:35:30,349] [INFO] [__main__]  Batch 30800 Loss: 0.344905 Cost: 90.49 Time: 230 ms/sequence
-[2021-04-29 00:36:16,538] [INFO] [__main__]  Batch 31000 Loss: 0.346562 Cost: 87.37 Time: 230 ms/sequence
-[2021-04-29 00:36:16,538] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-31000.model'
-[2021-04-29 00:36:16,540] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-31000.json'
-[2021-04-29 00:37:03,033] [INFO] [__main__]  Batch 31200 Loss: 0.351325 Cost: 87.02 Time: 232 ms/sequence
-[2021-04-29 00:37:47,614] [INFO] [__main__]  Batch 31400 Loss: 0.327896 Cost: 80.94 Time: 222 ms/sequence
-[2021-04-29 00:38:30,195] [INFO] [__main__]  Batch 31600 Loss: 0.326874 Cost: 76.51 Time: 212 ms/sequence
-[2021-04-29 00:39:16,089] [INFO] [__main__]  Batch 31800 Loss: 0.339414 Cost: 89.06 Time: 229 ms/sequence
-[2021-04-29 00:40:01,311] [INFO] [__main__]  Batch 32000 Loss: 0.320163 Cost: 83.54 Time: 226 ms/sequence
-[2021-04-29 00:40:01,311] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-32000.model'
-[2021-04-29 00:40:01,313] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-32000.json'
-[2021-04-29 00:40:46,780] [INFO] [__main__]  Batch 32200 Loss: 0.315085 Cost: 74.72 Time: 227 ms/sequence
-[2021-04-29 00:41:32,416] [INFO] [__main__]  Batch 32400 Loss: 0.324310 Cost: 82.96 Time: 228 ms/sequence
-[2021-04-29 00:42:18,035] [INFO] [__main__]  Batch 32600 Loss: 0.321665 Cost: 80.32 Time: 228 ms/sequence
-[2021-04-29 00:43:07,389] [INFO] [__main__]  Batch 32800 Loss: 0.336393 Cost: 89.44 Time: 246 ms/sequence
-[2021-04-29 00:43:57,433] [INFO] [__main__]  Batch 33000 Loss: 0.337257 Cost: 90.77 Time: 250 ms/sequence
-[2021-04-29 00:43:57,434] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-33000.model'
-[2021-04-29 00:43:57,435] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-33000.json'
-[2021-04-29 00:44:42,531] [INFO] [__main__]  Batch 33200 Loss: 0.293781 Cost: 75.40 Time: 225 ms/sequence
-[2021-04-29 00:45:31,693] [INFO] [__main__]  Batch 33400 Loss: 0.325541 Cost: 85.86 Time: 245 ms/sequence
-[2021-04-29 00:46:15,715] [INFO] [__main__]  Batch 33600 Loss: 0.322337 Cost: 82.45 Time: 220 ms/sequence
-[2021-04-29 00:47:05,507] [INFO] [__main__]  Batch 33800 Loss: 0.311776 Cost: 78.86 Time: 248 ms/sequence
-[2021-04-29 00:47:52,559] [INFO] [__main__]  Batch 34000 Loss: 0.301094 Cost: 82.55 Time: 235 ms/sequence
-[2021-04-29 00:47:52,559] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-34000.model'
-[2021-04-29 00:47:52,560] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-34000.json'
-[2021-04-29 00:48:41,801] [INFO] [__main__]  Batch 34200 Loss: 0.316184 Cost: 87.54 Time: 246 ms/sequence
-[2021-04-29 00:49:30,672] [INFO] [__main__]  Batch 34400 Loss: 0.301178 Cost: 86.19 Time: 244 ms/sequence
-[2021-04-29 00:50:15,110] [INFO] [__main__]  Batch 34600 Loss: 0.293267 Cost: 77.06 Time: 222 ms/sequence
-[2021-04-29 00:51:06,770] [INFO] [__main__]  Batch 34800 Loss: 0.307795 Cost: 88.91 Time: 258 ms/sequence
-[2021-04-29 00:51:55,864] [INFO] [__main__]  Batch 35000 Loss: 0.312033 Cost: 92.17 Time: 245 ms/sequence
-[2021-04-29 00:51:55,864] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-35000.model'
-[2021-04-29 00:51:55,865] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-35000.json'
-[2021-04-29 00:52:41,673] [INFO] [__main__]  Batch 35200 Loss: 0.301200 Cost: 84.86 Time: 229 ms/sequence
-[2021-04-29 00:53:31,489] [INFO] [__main__]  Batch 35400 Loss: 0.311119 Cost: 85.03 Time: 249 ms/sequence
-[2021-04-29 00:54:18,819] [INFO] [__main__]  Batch 35600 Loss: 0.298163 Cost: 81.24 Time: 236 ms/sequence
-[2021-04-29 00:55:01,116] [INFO] [__main__]  Batch 35800 Loss: 0.271965 Cost: 70.84 Time: 211 ms/sequence
-[2021-04-29 00:55:45,475] [INFO] [__main__]  Batch 36000 Loss: 0.302714 Cost: 81.03 Time: 221 ms/sequence
-[2021-04-29 00:55:45,475] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-36000.model'
-[2021-04-29 00:55:45,477] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-36000.json'
-[2021-04-29 00:56:32,043] [INFO] [__main__]  Batch 36200 Loss: 0.293554 Cost: 77.74 Time: 232 ms/sequence
-[2021-04-29 00:57:16,010] [INFO] [__main__]  Batch 36400 Loss: 0.267159 Cost: 68.97 Time: 219 ms/sequence
-[2021-04-29 00:58:02,488] [INFO] [__main__]  Batch 36600 Loss: 0.281392 Cost: 80.56 Time: 232 ms/sequence
-[2021-04-29 00:58:47,240] [INFO] [__main__]  Batch 36800 Loss: 0.275156 Cost: 77.76 Time: 223 ms/sequence
-[2021-04-29 00:59:34,767] [INFO] [__main__]  Batch 37000 Loss: 0.279967 Cost: 79.99 Time: 237 ms/sequence
-[2021-04-29 00:59:34,767] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-37000.model'
-[2021-04-29 00:59:34,769] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-37000.json'
-[2021-04-29 01:00:24,748] [INFO] [__main__]  Batch 37200 Loss: 0.286691 Cost: 75.30 Time: 249 ms/sequence
-[2021-04-29 01:01:09,878] [INFO] [__main__]  Batch 37400 Loss: 0.270212 Cost: 71.85 Time: 225 ms/sequence
-[2021-04-29 01:02:00,480] [INFO] [__main__]  Batch 37600 Loss: 0.305233 Cost: 84.31 Time: 253 ms/sequence
-[2021-04-29 01:02:41,271] [INFO] [__main__]  Batch 37800 Loss: 0.258354 Cost: 64.63 Time: 203 ms/sequence
-[2021-04-29 01:03:28,214] [INFO] [__main__]  Batch 38000 Loss: 0.264724 Cost: 67.83 Time: 234 ms/sequence
-[2021-04-29 01:03:28,214] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-38000.model'
-[2021-04-29 01:03:28,216] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-38000.json'
-[2021-04-29 01:04:17,601] [INFO] [__main__]  Batch 38200 Loss: 0.281851 Cost: 73.79 Time: 246 ms/sequence
-[2021-04-29 01:05:05,615] [INFO] [__main__]  Batch 38400 Loss: 0.281932 Cost: 84.37 Time: 240 ms/sequence
-[2021-04-29 01:05:53,233] [INFO] [__main__]  Batch 38600 Loss: 0.268360 Cost: 75.20 Time: 238 ms/sequence
-[2021-04-29 01:06:39,207] [INFO] [__main__]  Batch 38800 Loss: 0.270808 Cost: 72.16 Time: 229 ms/sequence
-[2021-04-29 01:07:22,929] [INFO] [__main__]  Batch 39000 Loss: 0.262677 Cost: 71.28 Time: 218 ms/sequence
-[2021-04-29 01:07:22,929] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-39000.model'
-[2021-04-29 01:07:22,930] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-39000.json'
-[2021-04-29 01:08:09,396] [INFO] [__main__]  Batch 39200 Loss: 0.276801 Cost: 76.90 Time: 232 ms/sequence
-[2021-04-29 01:08:56,143] [INFO] [__main__]  Batch 39400 Loss: 0.285101 Cost: 79.16 Time: 233 ms/sequence
-[2021-04-29 01:09:42,666] [INFO] [__main__]  Batch 39600 Loss: 0.265644 Cost: 78.98 Time: 232 ms/sequence
-[2021-04-29 01:10:31,428] [INFO] [__main__]  Batch 39800 Loss: 0.271503 Cost: 77.99 Time: 243 ms/sequence
-[2021-04-29 01:11:20,037] [INFO] [__main__]  Batch 40000 Loss: 0.293488 Cost: 80.92 Time: 243 ms/sequence
-[2021-04-29 01:11:20,038] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-40000.model'
-[2021-04-29 01:11:20,039] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-40000.json'
-[2021-04-29 01:12:04,196] [INFO] [__main__]  Batch 40200 Loss: 0.246713 Cost: 68.67 Time: 220 ms/sequence
-[2021-04-29 01:12:47,398] [INFO] [__main__]  Batch 40400 Loss: 0.267979 Cost: 69.76 Time: 216 ms/sequence
-[2021-04-29 01:13:33,696] [INFO] [__main__]  Batch 40600 Loss: 0.258430 Cost: 74.65 Time: 231 ms/sequence
-[2021-04-29 01:14:21,022] [INFO] [__main__]  Batch 40800 Loss: 0.283737 Cost: 85.75 Time: 236 ms/sequence
-[2021-04-29 01:15:04,301] [INFO] [__main__]  Batch 41000 Loss: 0.245893 Cost: 62.89 Time: 216 ms/sequence
-[2021-04-29 01:15:04,301] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-41000.model'
-[2021-04-29 01:15:04,303] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-41000.json'
-[2021-04-29 01:15:46,413] [INFO] [__main__]  Batch 41200 Loss: 0.232595 Cost: 65.38 Time: 210 ms/sequence
-[2021-04-29 01:16:33,886] [INFO] [__main__]  Batch 41400 Loss: 0.259099 Cost: 76.96 Time: 237 ms/sequence
-[2021-04-29 01:17:16,838] [INFO] [__main__]  Batch 41600 Loss: 0.247523 Cost: 65.40 Time: 214 ms/sequence
-[2021-04-29 01:18:00,556] [INFO] [__main__]  Batch 41800 Loss: 0.240141 Cost: 64.73 Time: 218 ms/sequence
-[2021-04-29 01:18:49,221] [INFO] [__main__]  Batch 42000 Loss: 0.226981 Cost: 68.37 Time: 243 ms/sequence
-[2021-04-29 01:18:49,222] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-42000.model'
-[2021-04-29 01:18:49,223] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-42000.json'
-[2021-04-29 01:19:31,576] [INFO] [__main__]  Batch 42200 Loss: 0.076952 Cost: 13.87 Time: 211 ms/sequence
-[2021-04-29 01:20:14,316] [INFO] [__main__]  Batch 42400 Loss: 0.029514 Cost: 6.43 Time: 213 ms/sequence
-[2021-04-29 01:21:02,114] [INFO] [__main__]  Batch 42600 Loss: 0.037546 Cost: 7.08 Time: 238 ms/sequence
-[2021-04-29 01:21:49,827] [INFO] [__main__]  Batch 42800 Loss: 0.025450 Cost: 5.11 Time: 238 ms/sequence
-[2021-04-29 01:22:37,722] [INFO] [__main__]  Batch 43000 Loss: 0.019608 Cost: 4.41 Time: 239 ms/sequence
-[2021-04-29 01:22:37,722] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-43000.model'
-[2021-04-29 01:22:37,723] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-43000.json'
-[2021-04-29 01:23:23,164] [INFO] [__main__]  Batch 43200 Loss: 0.020042 Cost: 3.69 Time: 227 ms/sequence
-[2021-04-29 01:24:09,969] [INFO] [__main__]  Batch 43400 Loss: 0.016717 Cost: 3.53 Time: 234 ms/sequence
-[2021-04-29 01:24:58,964] [INFO] [__main__]  Batch 43600 Loss: 0.018689 Cost: 3.35 Time: 244 ms/sequence
-[2021-04-29 01:25:49,276] [INFO] [__main__]  Batch 43800 Loss: 0.015228 Cost: 3.32 Time: 251 ms/sequence
-[2021-04-29 01:26:38,885] [INFO] [__main__]  Batch 44000 Loss: 0.014505 Cost: 3.01 Time: 248 ms/sequence
-[2021-04-29 01:26:38,885] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-44000.model'
-[2021-04-29 01:26:38,887] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-44000.json'
-[2021-04-29 01:27:22,983] [INFO] [__main__]  Batch 44200 Loss: 0.011520 Cost: 2.63 Time: 220 ms/sequence
-[2021-04-29 01:28:06,720] [INFO] [__main__]  Batch 44400 Loss: 0.014500 Cost: 2.57 Time: 218 ms/sequence
-[2021-04-29 01:28:57,273] [INFO] [__main__]  Batch 44600 Loss: 0.013873 Cost: 2.62 Time: 252 ms/sequence
-[2021-04-29 01:29:41,479] [INFO] [__main__]  Batch 44800 Loss: 0.011959 Cost: 2.28 Time: 221 ms/sequence
-[2021-04-29 01:30:33,897] [INFO] [__main__]  Batch 45000 Loss: 0.012452 Cost: 2.49 Time: 262 ms/sequence
-[2021-04-29 01:30:33,897] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-45000.model'
-[2021-04-29 01:30:33,898] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-45000.json'
-[2021-04-29 01:31:16,261] [INFO] [__main__]  Batch 45200 Loss: 0.015722 Cost: 2.17 Time: 211 ms/sequence
-[2021-04-29 01:31:58,914] [INFO] [__main__]  Batch 45400 Loss: 0.009621 Cost: 1.76 Time: 213 ms/sequence
-[2021-04-29 01:32:45,002] [INFO] [__main__]  Batch 45600 Loss: 0.012169 Cost: 2.16 Time: 230 ms/sequence
-[2021-04-29 01:33:27,850] [INFO] [__main__]  Batch 45800 Loss: 0.013156 Cost: 2.23 Time: 214 ms/sequence
-[2021-04-29 01:34:03,795] [INFO] [__main__]  Batch 46000 Loss: 0.011536 Cost: 1.95 Time: 179 ms/sequence
-[2021-04-29 01:34:03,796] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-46000.model'
-[2021-04-29 01:34:03,797] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-46000.json'
-[2021-04-29 01:34:48,428] [INFO] [__main__]  Batch 46200 Loss: 0.010834 Cost: 1.96 Time: 223 ms/sequence
-[2021-04-29 01:35:22,590] [INFO] [__main__]  Batch 46400 Loss: 0.010215 Cost: 1.61 Time: 170 ms/sequence
-[2021-04-29 01:35:59,121] [INFO] [__main__]  Batch 46600 Loss: 0.010442 Cost: 1.56 Time: 182 ms/sequence
-[2021-04-29 01:36:33,184] [INFO] [__main__]  Batch 46800 Loss: 0.008954 Cost: 1.65 Time: 170 ms/sequence
-[2021-04-29 01:37:15,201] [INFO] [__main__]  Batch 47000 Loss: 0.007241 Cost: 1.35 Time: 210 ms/sequence
-[2021-04-29 01:37:15,201] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-47000.model'
-[2021-04-29 01:37:15,203] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-47000.json'
-[2021-04-29 01:37:51,229] [INFO] [__main__]  Batch 47200 Loss: 0.007272 Cost: 1.30 Time: 180 ms/sequence
-[2021-04-29 01:38:35,080] [INFO] [__main__]  Batch 47400 Loss: 0.010723 Cost: 1.72 Time: 219 ms/sequence
-[2021-04-29 01:39:13,603] [INFO] [__main__]  Batch 47600 Loss: 0.009080 Cost: 1.38 Time: 192 ms/sequence
-[2021-04-29 01:39:52,853] [INFO] [__main__]  Batch 47800 Loss: 0.009563 Cost: 1.38 Time: 196 ms/sequence
-[2021-04-29 01:40:37,509] [INFO] [__main__]  Batch 48000 Loss: 0.007928 Cost: 1.12 Time: 223 ms/sequence
-[2021-04-29 01:40:37,509] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-48000.model'
-[2021-04-29 01:40:37,510] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-48000.json'
-[2021-04-29 01:41:16,161] [INFO] [__main__]  Batch 48200 Loss: 0.005425 Cost: 1.10 Time: 193 ms/sequence
-[2021-04-29 01:41:48,488] [INFO] [__main__]  Batch 48400 Loss: 0.010828 Cost: 1.53 Time: 161 ms/sequence
-[2021-04-29 01:42:30,556] [INFO] [__main__]  Batch 48600 Loss: 0.009376 Cost: 1.32 Time: 210 ms/sequence
-[2021-04-29 01:43:03,300] [INFO] [__main__]  Batch 48800 Loss: 0.005587 Cost: 0.99 Time: 163 ms/sequence
-[2021-04-29 01:43:39,526] [INFO] [__main__]  Batch 49000 Loss: 0.008329 Cost: 1.16 Time: 181 ms/sequence
-[2021-04-29 01:43:39,526] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-49000.model'
-[2021-04-29 01:43:39,527] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-49000.json'
-[2021-04-29 01:44:14,520] [INFO] [__main__]  Batch 49200 Loss: 0.009141 Cost: 1.38 Time: 174 ms/sequence
-[2021-04-29 01:44:49,159] [INFO] [__main__]  Batch 49400 Loss: 0.007133 Cost: 0.98 Time: 173 ms/sequence
-[2021-04-29 01:45:30,537] [INFO] [__main__]  Batch 49600 Loss: 0.004428 Cost: 0.90 Time: 206 ms/sequence
-[2021-04-29 01:46:04,046] [INFO] [__main__]  Batch 49800 Loss: 0.004341 Cost: 0.84 Time: 167 ms/sequence
-[2021-04-29 01:46:35,885] [INFO] [__main__]  Batch 50000 Loss: 0.013497 Cost: 1.23 Time: 159 ms/sequence
-[2021-04-29 01:46:35,885] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-50000.model'
-[2021-04-29 01:46:35,886] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-False-50000-1000-1/repeat-copy-task-1000-batch-50000.json'
-[2021-04-29 01:46:35,969] [INFO] [__main__]  Done training.
+[2021-04-28 22:32:32,393]  Total number of parameters: 63381
+[2021-04-28 22:32:32,393]  Training model for 50000 batches (batch_size=1)...
+
+[2021-04-28 22:33:22,802]  Batch 200 Loss: 0.647954 Cost: 124.55 Time: 252 ms/sequence
+[2021-04-28 22:34:09,016]  Batch 400 Loss: 0.624296 Cost: 121.39 Time: 231 ms/sequence
+[2021-04-28 22:35:05,657]  Batch 600 Loss: 0.616993 Cost: 120.21 Time: 283 ms/sequence
+[2021-04-28 22:36:04,438]  Batch 800 Loss: 0.603339 Cost: 123.38 Time: 293 ms/sequence
+[2021-04-28 22:36:57,913]  Batch 1000 Loss: 0.603156 Cost: 116.61 Time: 267 ms/sequence
+[2021-04-28 22:37:45,741]  Batch 1200 Loss: 0.590591 Cost: 106.13 Time: 239 ms/sequence
+[2021-04-28 22:38:36,259]  Batch 1400 Loss: 0.584474 Cost: 112.57 Time: 252 ms/sequence
+[2021-04-28 22:39:22,063]  Batch 1600 Loss: 0.584183 Cost: 115.22 Time: 229 ms/sequence
+[2021-04-28 22:40:13,433]  Batch 1800 Loss: 0.571871 Cost: 117.71 Time: 256 ms/sequence
+[2021-04-28 22:41:10,871]  Batch 2000 Loss: 0.568977 Cost: 121.51 Time: 287 ms/sequence
+[2021-04-28 22:42:04,792]  Batch 2200 Loss: 0.559665 Cost: 114.50 Time: 269 ms/sequence
+[2021-04-28 22:42:56,029]  Batch 2400 Loss: 0.560943 Cost: 116.97 Time: 256 ms/sequence
+[2021-04-28 22:43:42,285]  Batch 2600 Loss: 0.560445 Cost: 118.84 Time: 231 ms/sequence
+[2021-04-28 22:44:27,722]  Batch 2800 Loss: 0.545681 Cost: 114.39 Time: 227 ms/sequence
+[2021-04-28 22:45:21,962]  Batch 3000 Loss: 0.538894 Cost: 122.54 Time: 271 ms/sequence
+[2021-04-28 22:46:15,545]  Batch 3200 Loss: 0.543701 Cost: 116.29 Time: 267 ms/sequence
+[2021-04-28 22:47:09,299]  Batch 3400 Loss: 0.540831 Cost: 114.33 Time: 268 ms/sequence
+[2021-04-28 22:48:03,489]  Batch 3600 Loss: 0.527768 Cost: 111.45 Time: 270 ms/sequence
+[2021-04-28 22:48:58,434]  Batch 3800 Loss: 0.525279 Cost: 114.64 Time: 274 ms/sequence
+[2021-04-28 22:49:51,793]  Batch 4000 Loss: 0.525754 Cost: 107.55 Time: 266 ms/sequence
+[2021-04-28 22:50:50,114]  Batch 4200 Loss: 0.523504 Cost: 114.72 Time: 291 ms/sequence
+[2021-04-28 22:51:41,462]  Batch 4400 Loss: 0.513974 Cost: 110.95 Time: 256 ms/sequence
+[2021-04-28 22:52:24,365]  Batch 4600 Loss: 0.500540 Cost: 101.38 Time: 214 ms/sequence
+[2021-04-28 22:53:11,712]  Batch 4800 Loss: 0.509206 Cost: 101.01 Time: 236 ms/sequence
+[2021-04-28 22:54:00,852]  Batch 5000 Loss: 0.505125 Cost: 111.73 Time: 245 ms/sequence
+[2021-04-28 22:54:46,435]  Batch 5200 Loss: 0.507845 Cost: 106.29 Time: 227 ms/sequence
+[2021-04-28 22:55:32,752]  Batch 5400 Loss: 0.515629 Cost: 105.24 Time: 231 ms/sequence
+[2021-04-28 22:56:18,022]  Batch 5600 Loss: 0.491548 Cost: 99.44 Time: 226 ms/sequence
+[2021-04-28 22:57:07,193]  Batch 5800 Loss: 0.505930 Cost: 108.40 Time: 245 ms/sequence
+[2021-04-28 22:57:52,179]  Batch 6000 Loss: 0.499246 Cost: 110.64 Time: 224 ms/sequence
+[2021-04-28 22:58:39,220]  Batch 6200 Loss: 0.507043 Cost: 106.21 Time: 235 ms/sequence
+[2021-04-28 22:59:21,158]  Batch 6400 Loss: 0.498642 Cost: 99.24 Time: 209 ms/sequence
+[2021-04-28 23:00:12,005]  Batch 6600 Loss: 0.506565 Cost: 110.45 Time: 254 ms/sequence
+[2021-04-28 23:01:06,001]  Batch 6800 Loss: 0.489860 Cost: 108.21 Time: 269 ms/sequence
+[2021-04-28 23:01:57,088]  Batch 7000 Loss: 0.489037 Cost: 104.59 Time: 255 ms/sequence
+[2021-04-28 23:02:45,531]  Batch 7200 Loss: 0.510393 Cost: 107.55 Time: 242 ms/sequence
+[2021-04-28 23:03:41,893]  Batch 7400 Loss: 0.502957 Cost: 111.41 Time: 281 ms/sequence
+[2021-04-28 23:04:34,524]  Batch 7600 Loss: 0.504690 Cost: 113.46 Time: 263 ms/sequence
+[2021-04-28 23:05:20,606]  Batch 7800 Loss: 0.490369 Cost: 115.00 Time: 230 ms/sequence
+[2021-04-28 23:06:01,762]  Batch 8000 Loss: 0.486905 Cost: 98.51 Time: 205 ms/sequence
+[2021-04-28 23:06:42,059]  Batch 8200 Loss: 0.467227 Cost: 97.33 Time: 201 ms/sequence
+[2021-04-28 23:07:22,903]  Batch 8400 Loss: 0.481074 Cost: 99.53 Time: 204 ms/sequence
+[2021-04-28 23:08:08,895]  Batch 8600 Loss: 0.503842 Cost: 104.47 Time: 229 ms/sequence
+[2021-04-28 23:08:59,632]  Batch 8800 Loss: 0.500479 Cost: 108.66 Time: 253 ms/sequence
+[2021-04-28 23:09:51,407]  Batch 9000 Loss: 0.489529 Cost: 104.47 Time: 258 ms/sequence
+[2021-04-28 23:10:42,182]  Batch 9200 Loss: 0.486879 Cost: 98.31 Time: 253 ms/sequence
+[2021-04-28 23:11:43,607]  Batch 9400 Loss: 0.488588 Cost: 124.96 Time: 307 ms/sequence
+[2021-04-28 23:12:36,819]  Batch 9600 Loss: 0.496045 Cost: 105.65 Time: 266 ms/sequence
+[2021-04-28 23:13:27,332]  Batch 9800 Loss: 0.481793 Cost: 101.73 Time: 252 ms/sequence
+[2021-04-28 23:14:17,142]  Batch 10000 Loss: 0.494606 Cost: 112.98 Time: 249 ms/sequence
+[2021-04-28 23:15:10,992]  Batch 10200 Loss: 0.483689 Cost: 115.18 Time: 269 ms/sequence
+[2021-04-28 23:16:03,052]  Batch 10400 Loss: 0.481759 Cost: 111.07 Time: 260 ms/sequence
+[2021-04-28 23:16:52,170]  Batch 10600 Loss: 0.471979 Cost: 100.15 Time: 245 ms/sequence
+[2021-04-28 23:17:36,473]  Batch 10800 Loss: 0.473819 Cost: 95.74 Time: 221 ms/sequence
+[2021-04-28 23:18:22,430]  Batch 11000 Loss: 0.486521 Cost: 105.13 Time: 229 ms/sequence
+[2021-04-28 23:19:05,410]  Batch 11200 Loss: 0.481270 Cost: 97.61 Time: 214 ms/sequence
+[2021-04-28 23:19:50,311]  Batch 11400 Loss: 0.486859 Cost: 105.49 Time: 224 ms/sequence
+[2021-04-28 23:20:36,503]  Batch 11600 Loss: 0.474123 Cost: 98.22 Time: 230 ms/sequence
+[2021-04-28 23:21:28,264]  Batch 11800 Loss: 0.458420 Cost: 98.87 Time: 258 ms/sequence
+[2021-04-28 23:22:10,541]  Batch 12000 Loss: 0.470342 Cost: 95.06 Time: 211 ms/sequence
+[2021-04-28 23:22:57,402]  Batch 12200 Loss: 0.460320 Cost: 106.01 Time: 234 ms/sequence
+[2021-04-28 23:23:46,879]  Batch 12400 Loss: 0.486592 Cost: 102.50 Time: 247 ms/sequence
+[2021-04-28 23:24:32,055]  Batch 12600 Loss: 0.464528 Cost: 98.75 Time: 225 ms/sequence
+[2021-04-28 23:25:25,104]  Batch 12800 Loss: 0.491069 Cost: 110.54 Time: 265 ms/sequence
+[2021-04-28 23:26:17,529]  Batch 13000 Loss: 0.477204 Cost: 105.55 Time: 262 ms/sequence
+[2021-04-28 23:27:07,319]  Batch 13200 Loss: 0.466846 Cost: 103.70 Time: 248 ms/sequence
+[2021-04-28 23:27:58,250]  Batch 13400 Loss: 0.470682 Cost: 99.59 Time: 254 ms/sequence
+[2021-04-28 23:28:46,651]  Batch 13600 Loss: 0.485012 Cost: 112.97 Time: 242 ms/sequence
+[2021-04-28 23:29:35,919]  Batch 13800 Loss: 0.482558 Cost: 117.46 Time: 246 ms/sequence
+[2021-04-28 23:30:19,394]  Batch 14000 Loss: 0.471301 Cost: 101.16 Time: 217 ms/sequence
+[2021-04-28 23:31:09,851]  Batch 14200 Loss: 0.487107 Cost: 116.58 Time: 252 ms/sequence
+[2021-04-28 23:31:58,715]  Batch 14400 Loss: 0.453104 Cost: 105.52 Time: 244 ms/sequence
+[2021-04-28 23:32:46,897]  Batch 14600 Loss: 0.462100 Cost: 99.92 Time: 240 ms/sequence
+[2021-04-28 23:33:38,452]  Batch 14800 Loss: 0.467950 Cost: 108.96 Time: 257 ms/sequence
+[2021-04-28 23:34:26,016]  Batch 15000 Loss: 0.485167 Cost: 105.97 Time: 237 ms/sequence
+[2021-04-28 23:35:13,908]  Batch 15200 Loss: 0.459985 Cost: 91.76 Time: 239 ms/sequence
+[2021-04-28 23:36:02,346]  Batch 15400 Loss: 0.476879 Cost: 111.16 Time: 242 ms/sequence
+[2021-04-28 23:36:45,045]  Batch 15600 Loss: 0.449984 Cost: 103.39 Time: 213 ms/sequence
+[2021-04-28 23:37:28,106]  Batch 15800 Loss: 0.468793 Cost: 105.31 Time: 215 ms/sequence
+[2021-04-28 23:38:08,567]  Batch 16000 Loss: 0.465961 Cost: 95.27 Time: 202 ms/sequence
+[2021-04-28 23:38:50,752]  Batch 16200 Loss: 0.475787 Cost: 100.32 Time: 210 ms/sequence
+[2021-04-28 23:39:32,847]  Batch 16400 Loss: 0.470463 Cost: 103.28 Time: 210 ms/sequence
+[2021-04-28 23:40:18,976]  Batch 16600 Loss: 0.467017 Cost: 113.83 Time: 230 ms/sequence
+[2021-04-28 23:40:59,080]  Batch 16800 Loss: 0.453843 Cost: 88.50 Time: 200 ms/sequence
+[2021-04-28 23:41:42,837]  Batch 17000 Loss: 0.456809 Cost: 103.32 Time: 218 ms/sequence
+[2021-04-28 23:42:27,131]  Batch 17200 Loss: 0.472988 Cost: 98.72 Time: 221 ms/sequence
+[2021-04-28 23:43:11,959]  Batch 17400 Loss: 0.463156 Cost: 106.08 Time: 224 ms/sequence
+[2021-04-28 23:43:58,934]  Batch 17600 Loss: 0.462627 Cost: 101.64 Time: 234 ms/sequence
+[2021-04-28 23:44:43,483]  Batch 17800 Loss: 0.464462 Cost: 92.19 Time: 222 ms/sequence
+[2021-04-28 23:45:33,451]  Batch 18000 Loss: 0.474120 Cost: 110.98 Time: 249 ms/sequence
+[2021-04-28 23:46:19,903]  Batch 18200 Loss: 0.470605 Cost: 104.07 Time: 232 ms/sequence
+[2021-04-28 23:47:04,147]  Batch 18400 Loss: 0.462688 Cost: 105.53 Time: 221 ms/sequence
+[2021-04-28 23:47:45,087]  Batch 18600 Loss: 0.453464 Cost: 96.16 Time: 204 ms/sequence
+[2021-04-28 23:48:32,487]  Batch 18800 Loss: 0.455774 Cost: 100.51 Time: 237 ms/sequence
+[2021-04-28 23:49:22,651]  Batch 19000 Loss: 0.473705 Cost: 114.53 Time: 250 ms/sequence
+[2021-04-28 23:50:04,804]  Batch 19200 Loss: 0.443702 Cost: 96.91 Time: 210 ms/sequence
+[2021-04-28 23:50:48,669]  Batch 19400 Loss: 0.449913 Cost: 99.72 Time: 219 ms/sequence
+[2021-04-28 23:51:37,430]  Batch 19600 Loss: 0.452709 Cost: 100.99 Time: 243 ms/sequence
+[2021-04-28 23:52:26,611]  Batch 19800 Loss: 0.465620 Cost: 106.06 Time: 245 ms/sequence
+[2021-04-28 23:53:15,234]  Batch 20000 Loss: 0.471598 Cost: 109.33 Time: 243 ms/sequence
+[2021-04-28 23:54:03,024]  Batch 20200 Loss: 0.458687 Cost: 105.72 Time: 238 ms/sequence
+[2021-04-28 23:54:51,168]  Batch 20400 Loss: 0.446530 Cost: 105.93 Time: 240 ms/sequence
+[2021-04-28 23:55:38,614]  Batch 20600 Loss: 0.453995 Cost: 111.99 Time: 237 ms/sequence
+[2021-04-28 23:56:28,205]  Batch 20800 Loss: 0.459055 Cost: 109.57 Time: 247 ms/sequence
+[2021-04-28 23:57:13,613]  Batch 21000 Loss: 0.459568 Cost: 98.68 Time: 227 ms/sequence
+[2021-04-28 23:58:05,812]  Batch 21200 Loss: 0.454188 Cost: 113.02 Time: 260 ms/sequence
+[2021-04-28 23:58:52,247]  Batch 21400 Loss: 0.446710 Cost: 100.44 Time: 232 ms/sequence
+[2021-04-28 23:59:40,256]  Batch 21600 Loss: 0.436427 Cost: 103.70 Time: 240 ms/sequence
+[2021-04-29 00:00:25,127]  Batch 21800 Loss: 0.419170 Cost: 92.98 Time: 224 ms/sequence
+[2021-04-29 00:01:13,317]  Batch 22000 Loss: 0.451592 Cost: 104.60 Time: 240 ms/sequence
+[2021-04-29 00:01:56,864]  Batch 22200 Loss: 0.427995 Cost: 90.96 Time: 217 ms/sequence
+[2021-04-29 00:02:45,575]  Batch 22400 Loss: 0.453651 Cost: 101.89 Time: 243 ms/sequence
+[2021-04-29 00:03:31,602]  Batch 22600 Loss: 0.489697 Cost: 103.09 Time: 230 ms/sequence
+[2021-04-29 00:04:15,910]  Batch 22800 Loss: 0.440428 Cost: 98.99 Time: 221 ms/sequence
+[2021-04-29 00:05:05,221]  Batch 23000 Loss: 0.462338 Cost: 106.25 Time: 246 ms/sequence
+[2021-04-29 00:05:50,631]  Batch 23200 Loss: 0.429408 Cost: 99.40 Time: 227 ms/sequence
+[2021-04-29 00:06:39,378]  Batch 23400 Loss: 0.452571 Cost: 103.71 Time: 243 ms/sequence
+[2021-04-29 00:07:28,771]  Batch 23600 Loss: 0.463634 Cost: 108.35 Time: 246 ms/sequence
+[2021-04-29 00:08:20,286]  Batch 23800 Loss: 0.463549 Cost: 114.31 Time: 257 ms/sequence
+[2021-04-29 00:09:08,126]  Batch 24000 Loss: 0.455621 Cost: 100.68 Time: 239 ms/sequence
+[2021-04-29 00:09:56,009]  Batch 24200 Loss: 0.444249 Cost: 98.48 Time: 239 ms/sequence
+[2021-04-29 00:10:39,032]  Batch 24400 Loss: 0.436048 Cost: 88.86 Time: 215 ms/sequence
+[2021-04-29 00:11:23,394]  Batch 24600 Loss: 0.432885 Cost: 94.18 Time: 221 ms/sequence
+[2021-04-29 00:12:12,155]  Batch 24800 Loss: 0.442519 Cost: 108.84 Time: 243 ms/sequence
+[2021-04-29 00:12:57,535]  Batch 25000 Loss: 0.456947 Cost: 99.43 Time: 226 ms/sequence
+[2021-04-29 00:13:44,897]  Batch 25200 Loss: 0.455181 Cost: 103.79 Time: 236 ms/sequence
+[2021-04-29 00:14:30,348]  Batch 25400 Loss: 0.453144 Cost: 103.67 Time: 227 ms/sequence
+[2021-04-29 00:15:17,406]  Batch 25600 Loss: 0.465801 Cost: 112.36 Time: 235 ms/sequence
+[2021-04-29 00:16:03,622]  Batch 25800 Loss: 0.457340 Cost: 102.29 Time: 231 ms/sequence
+[2021-04-29 00:16:46,473]  Batch 26000 Loss: 0.439857 Cost: 88.61 Time: 214 ms/sequence
+[2021-04-29 00:17:34,123]  Batch 26200 Loss: 0.459707 Cost: 108.40 Time: 238 ms/sequence
+[2021-04-29 00:18:21,963]  Batch 26400 Loss: 0.434895 Cost: 104.47 Time: 239 ms/sequence
+[2021-04-29 00:19:05,216]  Batch 26600 Loss: 0.432029 Cost: 98.56 Time: 216 ms/sequence
+[2021-04-29 00:19:55,032]  Batch 26800 Loss: 0.463475 Cost: 106.60 Time: 249 ms/sequence
+[2021-04-29 00:20:40,991]  Batch 27000 Loss: 0.444085 Cost: 99.49 Time: 229 ms/sequence
+[2021-04-29 00:21:25,923]  Batch 27200 Loss: 0.442961 Cost: 102.90 Time: 224 ms/sequence
+[2021-04-29 00:22:13,986]  Batch 27400 Loss: 0.451461 Cost: 103.28 Time: 240 ms/sequence
+[2021-04-29 00:23:03,702]  Batch 27600 Loss: 0.458939 Cost: 107.82 Time: 248 ms/sequence
+[2021-04-29 00:23:48,132]  Batch 27800 Loss: 0.432653 Cost: 100.18 Time: 222 ms/sequence
+[2021-04-29 00:24:32,833]  Batch 28000 Loss: 0.452728 Cost: 97.96 Time: 223 ms/sequence
+[2021-04-29 00:25:23,916]  Batch 28200 Loss: 0.449408 Cost: 111.64 Time: 255 ms/sequence
+[2021-04-29 00:26:11,002]  Batch 28400 Loss: 0.436137 Cost: 104.62 Time: 235 ms/sequence
+[2021-04-29 00:26:58,141]  Batch 28600 Loss: 0.435436 Cost: 99.32 Time: 235 ms/sequence
+[2021-04-29 00:27:45,680]  Batch 28800 Loss: 0.441635 Cost: 99.95 Time: 237 ms/sequence
+[2021-04-29 00:28:30,415]  Batch 29000 Loss: 0.422969 Cost: 94.98 Time: 223 ms/sequence
+[2021-04-29 00:29:17,022]  Batch 29200 Loss: 0.424669 Cost: 104.98 Time: 233 ms/sequence
+[2021-04-29 00:30:03,488]  Batch 29400 Loss: 0.405303 Cost: 95.83 Time: 232 ms/sequence
+[2021-04-29 00:30:47,416]  Batch 29600 Loss: 0.403251 Cost: 95.75 Time: 219 ms/sequence
+[2021-04-29 00:31:36,259]  Batch 29800 Loss: 0.402892 Cost: 95.63 Time: 244 ms/sequence
+[2021-04-29 00:32:23,740]  Batch 30000 Loss: 0.392338 Cost: 95.99 Time: 237 ms/sequence
+[2021-04-29 00:33:09,874]  Batch 30200 Loss: 0.367936 Cost: 93.85 Time: 230 ms/sequence
+[2021-04-29 00:33:57,056]  Batch 30400 Loss: 0.368394 Cost: 92.24 Time: 235 ms/sequence
+[2021-04-29 00:34:44,165]  Batch 30600 Loss: 0.361590 Cost: 94.67 Time: 235 ms/sequence
+[2021-04-29 00:35:30,349]  Batch 30800 Loss: 0.344905 Cost: 90.49 Time: 230 ms/sequence
+[2021-04-29 00:36:16,538]  Batch 31000 Loss: 0.346562 Cost: 87.37 Time: 230 ms/sequence
+[2021-04-29 00:37:03,033]  Batch 31200 Loss: 0.351325 Cost: 87.02 Time: 232 ms/sequence
+[2021-04-29 00:37:47,614]  Batch 31400 Loss: 0.327896 Cost: 80.94 Time: 222 ms/sequence
+[2021-04-29 00:38:30,195]  Batch 31600 Loss: 0.326874 Cost: 76.51 Time: 212 ms/sequence
+[2021-04-29 00:39:16,089]  Batch 31800 Loss: 0.339414 Cost: 89.06 Time: 229 ms/sequence
+[2021-04-29 00:40:01,311]  Batch 32000 Loss: 0.320163 Cost: 83.54 Time: 226 ms/sequence
+[2021-04-29 00:40:46,780]  Batch 32200 Loss: 0.315085 Cost: 74.72 Time: 227 ms/sequence
+[2021-04-29 00:41:32,416]  Batch 32400 Loss: 0.324310 Cost: 82.96 Time: 228 ms/sequence
+[2021-04-29 00:42:18,035]  Batch 32600 Loss: 0.321665 Cost: 80.32 Time: 228 ms/sequence
+[2021-04-29 00:43:07,389]  Batch 32800 Loss: 0.336393 Cost: 89.44 Time: 246 ms/sequence
+[2021-04-29 00:43:57,433]  Batch 33000 Loss: 0.337257 Cost: 90.77 Time: 250 ms/sequence
+[2021-04-29 00:44:42,531]  Batch 33200 Loss: 0.293781 Cost: 75.40 Time: 225 ms/sequence
+[2021-04-29 00:45:31,693]  Batch 33400 Loss: 0.325541 Cost: 85.86 Time: 245 ms/sequence
+[2021-04-29 00:46:15,715]  Batch 33600 Loss: 0.322337 Cost: 82.45 Time: 220 ms/sequence
+[2021-04-29 00:47:05,507]  Batch 33800 Loss: 0.311776 Cost: 78.86 Time: 248 ms/sequence
+[2021-04-29 00:47:52,559]  Batch 34000 Loss: 0.301094 Cost: 82.55 Time: 235 ms/sequence
+[2021-04-29 00:48:41,801]  Batch 34200 Loss: 0.316184 Cost: 87.54 Time: 246 ms/sequence
+[2021-04-29 00:49:30,672]  Batch 34400 Loss: 0.301178 Cost: 86.19 Time: 244 ms/sequence
+[2021-04-29 00:50:15,110]  Batch 34600 Loss: 0.293267 Cost: 77.06 Time: 222 ms/sequence
+[2021-04-29 00:51:06,770]  Batch 34800 Loss: 0.307795 Cost: 88.91 Time: 258 ms/sequence
+[2021-04-29 00:51:55,864]  Batch 35000 Loss: 0.312033 Cost: 92.17 Time: 245 ms/sequence
+[2021-04-29 00:52:41,673]  Batch 35200 Loss: 0.301200 Cost: 84.86 Time: 229 ms/sequence
+[2021-04-29 00:53:31,489]  Batch 35400 Loss: 0.311119 Cost: 85.03 Time: 249 ms/sequence
+[2021-04-29 00:54:18,819]  Batch 35600 Loss: 0.298163 Cost: 81.24 Time: 236 ms/sequence
+[2021-04-29 00:55:01,116]  Batch 35800 Loss: 0.271965 Cost: 70.84 Time: 211 ms/sequence
+[2021-04-29 00:55:45,475]  Batch 36000 Loss: 0.302714 Cost: 81.03 Time: 221 ms/sequence
+[2021-04-29 00:56:32,043]  Batch 36200 Loss: 0.293554 Cost: 77.74 Time: 232 ms/sequence
+[2021-04-29 00:57:16,010]  Batch 36400 Loss: 0.267159 Cost: 68.97 Time: 219 ms/sequence
+[2021-04-29 00:58:02,488]  Batch 36600 Loss: 0.281392 Cost: 80.56 Time: 232 ms/sequence
+[2021-04-29 00:58:47,240]  Batch 36800 Loss: 0.275156 Cost: 77.76 Time: 223 ms/sequence
+[2021-04-29 00:59:34,767]  Batch 37000 Loss: 0.279967 Cost: 79.99 Time: 237 ms/sequence
+[2021-04-29 01:00:24,748]  Batch 37200 Loss: 0.286691 Cost: 75.30 Time: 249 ms/sequence
+[2021-04-29 01:01:09,878]  Batch 37400 Loss: 0.270212 Cost: 71.85 Time: 225 ms/sequence
+[2021-04-29 01:02:00,480]  Batch 37600 Loss: 0.305233 Cost: 84.31 Time: 253 ms/sequence
+[2021-04-29 01:02:41,271]  Batch 37800 Loss: 0.258354 Cost: 64.63 Time: 203 ms/sequence
+[2021-04-29 01:03:28,214]  Batch 38000 Loss: 0.264724 Cost: 67.83 Time: 234 ms/sequence
+[2021-04-29 01:04:17,601]  Batch 38200 Loss: 0.281851 Cost: 73.79 Time: 246 ms/sequence
+[2021-04-29 01:05:05,615]  Batch 38400 Loss: 0.281932 Cost: 84.37 Time: 240 ms/sequence
+[2021-04-29 01:05:53,233]  Batch 38600 Loss: 0.268360 Cost: 75.20 Time: 238 ms/sequence
+[2021-04-29 01:06:39,207]  Batch 38800 Loss: 0.270808 Cost: 72.16 Time: 229 ms/sequence
+[2021-04-29 01:07:22,929]  Batch 39000 Loss: 0.262677 Cost: 71.28 Time: 218 ms/sequence
+[2021-04-29 01:08:09,396]  Batch 39200 Loss: 0.276801 Cost: 76.90 Time: 232 ms/sequence
+[2021-04-29 01:08:56,143]  Batch 39400 Loss: 0.285101 Cost: 79.16 Time: 233 ms/sequence
+[2021-04-29 01:09:42,666]  Batch 39600 Loss: 0.265644 Cost: 78.98 Time: 232 ms/sequence
+[2021-04-29 01:10:31,428]  Batch 39800 Loss: 0.271503 Cost: 77.99 Time: 243 ms/sequence
+[2021-04-29 01:11:20,037]  Batch 40000 Loss: 0.293488 Cost: 80.92 Time: 243 ms/sequence
+[2021-04-29 01:12:04,196]  Batch 40200 Loss: 0.246713 Cost: 68.67 Time: 220 ms/sequence
+[2021-04-29 01:12:47,398]  Batch 40400 Loss: 0.267979 Cost: 69.76 Time: 216 ms/sequence
+[2021-04-29 01:13:33,696]  Batch 40600 Loss: 0.258430 Cost: 74.65 Time: 231 ms/sequence
+[2021-04-29 01:14:21,022]  Batch 40800 Loss: 0.283737 Cost: 85.75 Time: 236 ms/sequence
+[2021-04-29 01:15:04,301]  Batch 41000 Loss: 0.245893 Cost: 62.89 Time: 216 ms/sequence
+[2021-04-29 01:15:46,413]  Batch 41200 Loss: 0.232595 Cost: 65.38 Time: 210 ms/sequence
+[2021-04-29 01:16:33,886]  Batch 41400 Loss: 0.259099 Cost: 76.96 Time: 237 ms/sequence
+[2021-04-29 01:17:16,838]  Batch 41600 Loss: 0.247523 Cost: 65.40 Time: 214 ms/sequence
+[2021-04-29 01:18:00,556]  Batch 41800 Loss: 0.240141 Cost: 64.73 Time: 218 ms/sequence
+[2021-04-29 01:18:49,221]  Batch 42000 Loss: 0.226981 Cost: 68.37 Time: 243 ms/sequence
+[2021-04-29 01:19:31,576]  Batch 42200 Loss: 0.076952 Cost: 13.87 Time: 211 ms/sequence
+[2021-04-29 01:20:14,316]  Batch 42400 Loss: 0.029514 Cost: 6.43 Time: 213 ms/sequence
+[2021-04-29 01:21:02,114]  Batch 42600 Loss: 0.037546 Cost: 7.08 Time: 238 ms/sequence
+[2021-04-29 01:21:49,827]  Batch 42800 Loss: 0.025450 Cost: 5.11 Time: 238 ms/sequence
+[2021-04-29 01:22:37,722]  Batch 43000 Loss: 0.019608 Cost: 4.41 Time: 239 ms/sequence
+[2021-04-29 01:23:23,164]  Batch 43200 Loss: 0.020042 Cost: 3.69 Time: 227 ms/sequence
+[2021-04-29 01:24:09,969]  Batch 43400 Loss: 0.016717 Cost: 3.53 Time: 234 ms/sequence
+[2021-04-29 01:24:58,964]  Batch 43600 Loss: 0.018689 Cost: 3.35 Time: 244 ms/sequence
+[2021-04-29 01:25:49,276]  Batch 43800 Loss: 0.015228 Cost: 3.32 Time: 251 ms/sequence
+[2021-04-29 01:26:38,885]  Batch 44000 Loss: 0.014505 Cost: 3.01 Time: 248 ms/sequence
+[2021-04-29 01:27:22,983]  Batch 44200 Loss: 0.011520 Cost: 2.63 Time: 220 ms/sequence
+[2021-04-29 01:28:06,720]  Batch 44400 Loss: 0.014500 Cost: 2.57 Time: 218 ms/sequence
+[2021-04-29 01:28:57,273]  Batch 44600 Loss: 0.013873 Cost: 2.62 Time: 252 ms/sequence
+[2021-04-29 01:29:41,479]  Batch 44800 Loss: 0.011959 Cost: 2.28 Time: 221 ms/sequence
+[2021-04-29 01:30:33,897]  Batch 45000 Loss: 0.012452 Cost: 2.49 Time: 262 ms/sequence
+[2021-04-29 01:31:16,261]  Batch 45200 Loss: 0.015722 Cost: 2.17 Time: 211 ms/sequence
+[2021-04-29 01:31:58,914]  Batch 45400 Loss: 0.009621 Cost: 1.76 Time: 213 ms/sequence
+[2021-04-29 01:32:45,002]  Batch 45600 Loss: 0.012169 Cost: 2.16 Time: 230 ms/sequence
+[2021-04-29 01:33:27,850]  Batch 45800 Loss: 0.013156 Cost: 2.23 Time: 214 ms/sequence
+[2021-04-29 01:34:03,795]  Batch 46000 Loss: 0.011536 Cost: 1.95 Time: 179 ms/sequence
+[2021-04-29 01:34:48,428]  Batch 46200 Loss: 0.010834 Cost: 1.96 Time: 223 ms/sequence
+[2021-04-29 01:35:22,590]  Batch 46400 Loss: 0.010215 Cost: 1.61 Time: 170 ms/sequence
+[2021-04-29 01:35:59,121]  Batch 46600 Loss: 0.010442 Cost: 1.56 Time: 182 ms/sequence
+[2021-04-29 01:36:33,184]  Batch 46800 Loss: 0.008954 Cost: 1.65 Time: 170 ms/sequence
+[2021-04-29 01:37:15,201]  Batch 47000 Loss: 0.007241 Cost: 1.35 Time: 210 ms/sequence
+[2021-04-29 01:37:51,229]  Batch 47200 Loss: 0.007272 Cost: 1.30 Time: 180 ms/sequence
+[2021-04-29 01:38:35,080]  Batch 47400 Loss: 0.010723 Cost: 1.72 Time: 219 ms/sequence
+[2021-04-29 01:39:13,603]  Batch 47600 Loss: 0.009080 Cost: 1.38 Time: 192 ms/sequence
+[2021-04-29 01:39:52,853]  Batch 47800 Loss: 0.009563 Cost: 1.38 Time: 196 ms/sequence
+[2021-04-29 01:40:37,509]  Batch 48000 Loss: 0.007928 Cost: 1.12 Time: 223 ms/sequence
+[2021-04-29 01:41:16,161]  Batch 48200 Loss: 0.005425 Cost: 1.10 Time: 193 ms/sequence
+[2021-04-29 01:41:48,488]  Batch 48400 Loss: 0.010828 Cost: 1.53 Time: 161 ms/sequence
+[2021-04-29 01:42:30,556]  Batch 48600 Loss: 0.009376 Cost: 1.32 Time: 210 ms/sequence
+[2021-04-29 01:43:03,300]  Batch 48800 Loss: 0.005587 Cost: 0.99 Time: 163 ms/sequence
+[2021-04-29 01:43:39,526]  Batch 49000 Loss: 0.008329 Cost: 1.16 Time: 181 ms/sequence
+[2021-04-29 01:44:14,520]  Batch 49200 Loss: 0.009141 Cost: 1.38 Time: 174 ms/sequence
+[2021-04-29 01:44:49,159]  Batch 49400 Loss: 0.007133 Cost: 0.98 Time: 173 ms/sequence
+[2021-04-29 01:45:30,537]  Batch 49600 Loss: 0.004428 Cost: 0.90 Time: 206 ms/sequence
+[2021-04-29 01:46:04,046]  Batch 49800 Loss: 0.004341 Cost: 0.84 Time: 167 ms/sequence
+[2021-04-29 01:46:35,885]  Batch 50000 Loss: 0.013497 Cost: 1.23 Time: 159 ms/sequence
+[2021-04-29 01:46:35,969]  Done training.
 
