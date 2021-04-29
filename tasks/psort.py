@@ -64,8 +64,8 @@ def dataloader(num_batches,
 @attrs
 class PrioritySortTaskParams(object):
     name = attrib(default="priority_sort")
-    controller_size = attrib(default=200, convert=int)
-    controller_layers = attrib(default=1,convert=int)
+    controller_size = attrib(default=100, convert=int)
+    controller_layers = attrib(default=2,convert=int)
     num_heads = attrib(default=5, convert=int)
     sequence_width = attrib(default=8, convert=int)
     sequence_len = attrib(default=20,convert=int)
