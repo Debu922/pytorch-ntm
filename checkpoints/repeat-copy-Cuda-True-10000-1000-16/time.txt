@@ -1,0 +1,82 @@
+python train.py --task repeat-copy --checkpoint-path checkpoints/ --checkpoint-interval 1000 -pnum_batches=10000 --use_cuda True -pbatch_size=16
+[2021-04-28 22:31:21,923] [INFO] [__main__]  Using seed=1000
+True
+[2021-04-28 22:31:21,924] [INFO] [__main__]  Training for the **repeat-copy** task
+[2021-04-28 22:31:21,924] [INFO] [__main__]  RepeatCopyTaskParams(name='repeat-copy-task', controller_size=100, controller_layers=1, num_heads=1, sequence_width=8, sequence_min_len=1, sequence_max_len=10, repeat_min=1, repeat_max=10, memory_n=128, memory_m=20, num_batches=10000, batch_size=16, rmsprop_lr=0.0001, rmsprop_momentum=0.9, rmsprop_alpha=0.95)
+[2021-04-28 22:31:23,694] [INFO] [__main__]  GPU Found: Using GPU
+[2021-04-28 22:31:23,694] [INFO] [__main__]  Total number of parameters: 63381
+[2021-04-28 22:31:23,694] [INFO] [__main__]  Training model for 10000 batches (batch_size=16)...
+/home/mohit/anaconda3/envs/ntm-pytorch/lib/python3.8/site-packages/torch/nn/functional.py:1625: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+[2021-04-28 22:34:38,872] [INFO] [__main__]  Batch 200 Loss: 0.627452 Cost: 121.01 Time: 60 ms/sequence
+[2021-04-28 22:38:35,148] [INFO] [__main__]  Batch 400 Loss: 0.585654 Cost: 116.04 Time: 73 ms/sequence
+[2021-04-28 22:42:35,347] [INFO] [__main__]  Batch 600 Loss: 0.554686 Cost: 110.33 Time: 75 ms/sequence
+[2021-04-28 22:46:27,888] [INFO] [__main__]  Batch 800 Loss: 0.525150 Cost: 110.90 Time: 72 ms/sequence
+[2021-04-28 22:50:22,068] [INFO] [__main__]  Batch 1000 Loss: 0.530240 Cost: 104.46 Time: 73 ms/sequence
+[2021-04-28 22:50:22,068] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-1000.model'
+[2021-04-28 22:50:22,070] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-1000.json'
+[2021-04-28 22:53:52,451] [INFO] [__main__]  Batch 1200 Loss: 0.509324 Cost: 94.38 Time: 65 ms/sequence
+[2021-04-28 22:57:29,145] [INFO] [__main__]  Batch 1400 Loss: 0.506768 Cost: 100.01 Time: 67 ms/sequence
+[2021-04-28 23:01:11,550] [INFO] [__main__]  Batch 1600 Loss: 0.513661 Cost: 103.68 Time: 69 ms/sequence
+[2021-04-28 23:05:00,267] [INFO] [__main__]  Batch 1800 Loss: 0.501522 Cost: 105.76 Time: 71 ms/sequence
+[2021-04-28 23:08:51,324] [INFO] [__main__]  Batch 2000 Loss: 0.488146 Cost: 109.75 Time: 72 ms/sequence
+[2021-04-28 23:08:51,325] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-2000.model'
+[2021-04-28 23:08:51,330] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-2000.json'
+[2021-04-28 23:12:42,099] [INFO] [__main__]  Batch 2200 Loss: 0.483861 Cost: 103.31 Time: 72 ms/sequence
+[2021-04-28 23:16:38,202] [INFO] [__main__]  Batch 2400 Loss: 0.502115 Cost: 107.63 Time: 73 ms/sequence
+[2021-04-28 23:20:30,395] [INFO] [__main__]  Batch 2600 Loss: 0.492276 Cost: 108.79 Time: 72 ms/sequence
+[2021-04-28 23:24:20,932] [INFO] [__main__]  Batch 2800 Loss: 0.484449 Cost: 105.51 Time: 72 ms/sequence
+[2021-04-28 23:28:30,519] [INFO] [__main__]  Batch 3000 Loss: 0.483871 Cost: 113.59 Time: 77 ms/sequence
+[2021-04-28 23:28:30,519] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-3000.model'
+[2021-04-28 23:28:30,522] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-3000.json'
+[2021-04-28 23:32:21,748] [INFO] [__main__]  Batch 3200 Loss: 0.493831 Cost: 109.07 Time: 72 ms/sequence
+[2021-04-28 23:36:11,358] [INFO] [__main__]  Batch 3400 Loss: 0.496960 Cost: 107.36 Time: 71 ms/sequence
+[2021-04-28 23:39:51,802] [INFO] [__main__]  Batch 3600 Loss: 0.482437 Cost: 105.36 Time: 68 ms/sequence
+[2021-04-28 23:43:38,371] [INFO] [__main__]  Batch 3800 Loss: 0.488424 Cost: 109.37 Time: 70 ms/sequence
+[2021-04-28 23:47:19,045] [INFO] [__main__]  Batch 4000 Loss: 0.488590 Cost: 102.51 Time: 68 ms/sequence
+[2021-04-28 23:47:19,045] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-4000.model'
+[2021-04-28 23:47:19,047] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-4000.json'
+[2021-04-28 23:51:02,902] [INFO] [__main__]  Batch 4200 Loss: 0.480820 Cost: 109.66 Time: 69 ms/sequence
+[2021-04-28 23:54:35,365] [INFO] [__main__]  Batch 4400 Loss: 0.475726 Cost: 107.06 Time: 66 ms/sequence
+[2021-04-28 23:57:51,982] [INFO] [__main__]  Batch 4600 Loss: 0.459332 Cost: 96.79 Time: 61 ms/sequence
+[2021-04-29 00:01:19,042] [INFO] [__main__]  Batch 4800 Loss: 0.475252 Cost: 97.36 Time: 64 ms/sequence
+[2021-04-29 00:05:08,747] [INFO] [__main__]  Batch 5000 Loss: 0.473739 Cost: 108.58 Time: 71 ms/sequence
+[2021-04-29 00:05:08,747] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-5000.model'
+[2021-04-29 00:05:08,750] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-5000.json'
+[2021-04-29 00:08:36,492] [INFO] [__main__]  Batch 5200 Loss: 0.481893 Cost: 103.74 Time: 64 ms/sequence
+[2021-04-29 00:12:06,606] [INFO] [__main__]  Batch 5400 Loss: 0.479982 Cost: 100.98 Time: 65 ms/sequence
+[2021-04-29 00:15:23,659] [INFO] [__main__]  Batch 5600 Loss: 0.464719 Cost: 97.51 Time: 61 ms/sequence
+[2021-04-29 00:18:57,047] [INFO] [__main__]  Batch 5800 Loss: 0.482750 Cost: 105.78 Time: 66 ms/sequence
+[2021-04-29 00:22:37,905] [INFO] [__main__]  Batch 6000 Loss: 0.469131 Cost: 106.30 Time: 69 ms/sequence
+[2021-04-29 00:22:37,905] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-6000.model'
+[2021-04-29 00:22:37,912] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-6000.json'
+[2021-04-29 00:26:02,528] [INFO] [__main__]  Batch 6200 Loss: 0.473658 Cost: 102.26 Time: 63 ms/sequence
+[2021-04-29 00:29:19,600] [INFO] [__main__]  Batch 6400 Loss: 0.462092 Cost: 96.14 Time: 61 ms/sequence
+[2021-04-29 00:32:53,972] [INFO] [__main__]  Batch 6600 Loss: 0.469971 Cost: 105.52 Time: 66 ms/sequence
+[2021-04-29 00:36:24,166] [INFO] [__main__]  Batch 6800 Loss: 0.461258 Cost: 105.04 Time: 65 ms/sequence
+[2021-04-29 00:39:39,363] [INFO] [__main__]  Batch 7000 Loss: 0.457014 Cost: 101.00 Time: 60 ms/sequence
+[2021-04-29 00:39:39,364] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-7000.model'
+[2021-04-29 00:39:39,365] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-7000.json'
+[2021-04-29 00:43:09,626] [INFO] [__main__]  Batch 7200 Loss: 0.475064 Cost: 103.35 Time: 65 ms/sequence
+[2021-04-29 00:46:51,368] [INFO] [__main__]  Batch 7400 Loss: 0.477960 Cost: 108.71 Time: 69 ms/sequence
+[2021-04-29 00:50:32,657] [INFO] [__main__]  Batch 7600 Loss: 0.483887 Cost: 111.32 Time: 69 ms/sequence
+[2021-04-29 00:54:07,378] [INFO] [__main__]  Batch 7800 Loss: 0.466132 Cost: 111.91 Time: 67 ms/sequence
+[2021-04-29 00:57:27,369] [INFO] [__main__]  Batch 8000 Loss: 0.460541 Cost: 95.52 Time: 62 ms/sequence
+[2021-04-29 00:57:27,369] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-8000.model'
+[2021-04-29 00:57:27,370] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-8000.json'
+[2021-04-29 01:00:47,283] [INFO] [__main__]  Batch 8200 Loss: 0.429121 Cost: 95.37 Time: 62 ms/sequence
+[2021-04-29 01:04:15,297] [INFO] [__main__]  Batch 8400 Loss: 0.439157 Cost: 95.77 Time: 65 ms/sequence
+[2021-04-29 01:07:39,250] [INFO] [__main__]  Batch 8600 Loss: 0.459032 Cost: 99.69 Time: 63 ms/sequence
+[2021-04-29 01:11:11,682] [INFO] [__main__]  Batch 8800 Loss: 0.470303 Cost: 103.78 Time: 66 ms/sequence
+[2021-04-29 01:14:31,637] [INFO] [__main__]  Batch 9000 Loss: 0.447498 Cost: 98.79 Time: 62 ms/sequence
+[2021-04-29 01:14:31,637] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-9000.model'
+[2021-04-29 01:14:31,639] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-9000.json'
+[2021-04-29 01:17:48,028] [INFO] [__main__]  Batch 9200 Loss: 0.436178 Cost: 92.61 Time: 61 ms/sequence
+[2021-04-29 01:21:45,235] [INFO] [__main__]  Batch 9400 Loss: 0.457093 Cost: 120.33 Time: 74 ms/sequence
+[2021-04-29 01:25:25,000] [INFO] [__main__]  Batch 9600 Loss: 0.443506 Cost: 99.26 Time: 68 ms/sequence
+[2021-04-29 01:29:05,059] [INFO] [__main__]  Batch 9800 Loss: 0.433522 Cost: 96.50 Time: 68 ms/sequence
+[2021-04-29 01:32:47,620] [INFO] [__main__]  Batch 10000 Loss: 0.416276 Cost: 103.71 Time: 69 ms/sequence
+[2021-04-29 01:32:47,620] [INFO] [__main__]  Saving model checkpoint to: 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-10000.model'
+[2021-04-29 01:32:47,622] [INFO] [__main__]  Saving model training history to 'checkpoints/repeat-copy-Cuda-True-10000-1000-16/repeat-copy-task-1000-batch-10000.json'
+[2021-04-29 01:32:47,651] [INFO] [__main__]  Done training.
+
