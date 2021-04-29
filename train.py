@@ -42,12 +42,14 @@ from tasks.copytask import CopyTaskModelTraining, CopyTaskParams
 from tasks.repeatcopytask import RepeatCopyTaskModelTraining, RepeatCopyTaskParams
 from tasks.recall import  RecallTaskModelTraining, AssociateRecallParams
 from tasks.sort import SortTaskModelTraining, SortTaskParams
+from tasks.psort import PrioritySortTaskModelTraining, PrioritySortTaskParams
 
 TASKS = {
     'copy': (CopyTaskModelTraining, CopyTaskParams),
     'repeat-copy': (RepeatCopyTaskModelTraining, RepeatCopyTaskParams),
     'recall': (RecallTaskModelTraining, AssociateRecallParams),
-    'sort': (SortTaskModelTraining, SortTaskParams)
+    'sort': (SortTaskModelTraining, SortTaskParams),
+    'psort': (PrioritySortTaskModelTraining, PrioritySortTaskParams)
 }
 
 
