@@ -1,4 +1,4 @@
-"""Copy Task NTM model."""
+"""Priority Sort Task NTM model."""
 import random
 
 from attr import attrs, attrib, Factory
@@ -22,22 +22,23 @@ def dataloader(num_batches,
                batch_size,
                seq_width,
                seq_len):
-    """Generator of random sequences for the copy task.
+    """Generator of sequences for the Priority Sort task.
 
-    Creates random batches of "bits" sequences.
+    Creates batches of "bits" sequences along with a list of weights
+    according to which the NTM is expected to sort the results.
 
     All the sequences within each batch have the same length.
-    The length is [`min_len`, `max_len`]
+    The length is 'seq_len'
 
     :param num_batches: Total number of batches to generate.
-    :param seq_width: The width of each item in the sequence.
     :param batch_size: Batch size.
-    :param min_len: Sequence minimum length.
-    :param max_len: Sequence maximum length.
+    :param seq_width: The width of each item in the sequence.
+    :param seq_len: The Legnth of each sequence in the batch.
 
     NOTE: The input width is `seq_width + 1`, the additional input
     contain the delimiter.
     """
+
     for batch_num in range(num_batches):
         prob = 0.5 * torch.ones([seq_len,batch_size, seq_width], dtype=torch.float64)
         seq = Binomial(1, prob).sample()
@@ -60,7 +61,6 @@ def dataloader(num_batches,
 
         yield batch_num+1, inp.float(), outp.float()
 
-
 @attrs
 class PrioritySortTaskParams(object):
     name = attrib(default="priority_sort")
@@ -79,18 +79,18 @@ class PrioritySortTaskParams(object):
 
 
 #
-# To create a network simply instantiate the `:class:CopyTaskModelTraining`,
+# To create a network simply instantiate the `:class:PriorityTaskModelTraining`,
 # all the components will be wired with the default values.
 # In case you'd like to change any of defaults, do the following:
 #
-# > params = CopyTaskParams(batch_size=4)
-# > model = CopyTaskModelTraining(params=params)
+# > params = PrioritySortTaskParams(batch_size=4)
+# > model = PrioritySortTaskModelTraining(params=params)
 #
 # Then use `model.net`, `model.optimizer` and `model.criterion` to train the
 # network. Call `model.train_batch` for training and `model.evaluate`
 # for evaluating.
 #
-# You may skip this alltogether, and use `:class:CopyTaskNTM` directly.
+# You may skip this alltogether, and use `:class:PrioritySortTaskNTM` directly.
 #
 
 @attrs

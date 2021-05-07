@@ -1,4 +1,4 @@
-"""Copy Task NTM model."""
+"""Lexicographic Sort Task NTM model."""
 import random
 
 from attr import attrs, attrib, Factory
@@ -20,18 +20,18 @@ def dataloader(num_batches,
                batch_size,
                seq_width,
                seq_len):
-    """Generator of random sequences for the copy task.
+    """Generator of random sequences for the Sort task.
 
-    Creates random batches of "bits" sequences.
+    Creates random batches of "bits" sequences. Which needs to be 
+    sorted by the NTM according to number of bits.
 
     All the sequences within each batch have the same length.
-    The length is [`min_len`, `max_len`]
+    The length is 'seq_len'
 
     :param num_batches: Total number of batches to generate.
-    :param seq_width: The width of each item in the sequence.
     :param batch_size: Batch size.
-    :param min_len: Sequence minimum length.
-    :param max_len: Sequence maximum length.
+    :param seq_width: The width of each item in the sequence.
+    :param seq_len: The Legnth of each sequence in the batch.
 
     NOTE: The input width is `seq_width + 1`, the additional input
     contain the delimiter.
@@ -71,18 +71,18 @@ class SortTaskParams(object):
 
 
 #
-# To create a network simply instantiate the `:class:CopyTaskModelTraining`,
+# To create a network simply instantiate the `:class:SortTaskModelTraining`,
 # all the components will be wired with the default values.
 # In case you'd like to change any of defaults, do the following:
 #
-# > params = CopyTaskParams(batch_size=4)
-# > model = CopyTaskModelTraining(params=params)
+# > params = SortTaskParams(batch_size=4)
+# > model = SortTaskModelTraining(params=params)
 #
 # Then use `model.net`, `model.optimizer` and `model.criterion` to train the
 # network. Call `model.train_batch` for training and `model.evaluate`
 # for evaluating.
 #
-# You may skip this alltogether, and use `:class:CopyTaskNTM` directly.
+# You may skip this alltogether, and use `:class:SortTaskNTM` directly.
 #
 
 @attrs
